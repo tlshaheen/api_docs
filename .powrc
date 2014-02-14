@@ -1,0 +1,4 @@
+if [ -f "$rvm_path/scripts/rvm" ] && [ -f ".ruby-version" ]; then
+  source "$rvm_path/scripts/rvm"
+  rvm use 2.0.0-p0@`cat .ruby-gemset`
+fi
