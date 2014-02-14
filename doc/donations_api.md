@@ -128,7 +128,7 @@ GET https://foobar.nationbuilder.com/api/v1/donations?page=2&per_page=1
               "cycle": "2013",
               "period": "Primary",
               "period_ngp_code": "P"
-          }
+          },
           "failed_at": null,
           "fec_type": "Contribution",
           "fec_type_ngp_code": "C",
@@ -180,12 +180,12 @@ With attached body content like this:
 ```json 
 {
   "donation": {
-      amount_in_cents: 1000,
-      payment_type_name: 'Cash',
-      tracking_code_slug: 'foo_bar',
-      donor: {
-          first_name: 'Sarah',
-          last_name: 'Kerrigan'
+      "amount_in_cents": 1000,
+      "payment_type_name": 'Cash',
+      "tracking_code_slug": 'foo_bar',
+      "donor": {
+          "first_name": "Sarah",
+          "last_name": "Kerrigan"
       }
   }
 }
@@ -264,10 +264,9 @@ With request body like this:
 
 ```json
 {
-{
   "donation": {
-      donor: {
-          email: 'sarah@example.com'
+      "donor": {
+          "email": "sarah@example.com"
       }
   }
 }
