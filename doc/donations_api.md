@@ -6,33 +6,33 @@ Resources
 
 ### Donation Resource
 
-* `amount` - TODO
-* `amount_in_cents` - TODO
-* `author_id` - TODO
-* `billing_address` - an address resource TODO
+* `amount` - amount of donation
+* `amount_in_cents` - amount of donation in cents
+* `author_id` - id of the person who created the Donation
+* `billing_address` - an address resource representing the billing address
 * `canceled_at` - timestamp representing when the Donation was canceled
-* `check_number` - TODO
+* `check_number` - check/wire/MO number
 * `corporate_contribution` - TODO
 * `created_at` - timestamp representing when the Donation was created
 * `donor` - TODO DonorResource
 * `failed_at` - TODO
 * `id` - id of the Donation
 * `import_id` - TODO
-* `is_private` - TODO
+* `is_private` - false if the donation should not be posted publicly on the site
 * `mailing_slug` - TODO
 * `merchant_account_id` - TODO
 * `ngp_id` - TODO
 * `note` - TODO
 * `page_slug` - TODO
-* `payment_type_name` - TODO
-* `payment_type_ngp_code` - TODO
+* `payment_type_name` - name of the [payment type](http://nationbuilder.com/what_are_the_valid_payment_types_for_imports)
+* `payment_type_ngp_code` - code of the [payment type](http://nationbuilder.com/what_are_the_valid_payment_types_for_imports)
 * `pledge_id` - TODO
 * `recruiter_name_or_email` - TODO
 * `recurring_donation_id` - TODO
 * `succeeded_at` - timestamp representing when the Donation succeeded
 * `tracking_code_slug` - TODO
 * `updated_at` - timestamp representing when the Donation was updated
-* `work_address` - an address resource TODO
+* `work_address` - an address resource representing the work address
 
 Visible only if the Voter addon is enabled:
 
@@ -254,7 +254,7 @@ PUT /api/v1/donations/:id
 
 ### Example
 
-Make this request (assuming you have a Donation with id 87):
+Make this request (assuming you have a Donation with id 89):
 
 ```
 PUT /api/v1/donations/87
