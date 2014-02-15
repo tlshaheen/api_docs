@@ -2,8 +2,11 @@ API Authentication Quick-Start Guide
 ====================================
 
 Preliminary: If you already have an account, just login to the control panel and
-continue below. Otherwise, email api@nationbuilder.com to request a free account.
-You will get a response with within one working day.
+continue below. Otherwise, email api@nationbuilder.com to request a free account,
+and specify your desired slug, joeyforprez, for example. This slug will be used in your
+NationBuilder URL, joeyforprez.nationbuilder.com. This cannot be changed; we
+recommend using your organization or company name. You will get a response with
+within one working day.
 
 These are the steps necessary to start using the API:
 
