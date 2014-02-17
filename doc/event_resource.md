@@ -16,6 +16,7 @@
 | contact      | optional      |                                      | Information about the point of contact for the event                                                         |
 | start_time   | required      | 2013-09-23T06:00:00-00:00            | When the event starts                                                                                        |
 | end_time     | required      | 2013-09-23T07:00:00-00:00            | When the event ends                                                                                          |
+| time_zone    | optional      | Hawaii                               | The time zone associated with the start and end times                                                        |
 | rsvp_form    | optional      |                                      | details about the form users will fill out to (leave out and the event will not accept RSVPs)                |
 | capacity     | optional      | 30                                   | The event's capacity for attendees                                                                           |
 | show_guests  | optional      | true                                 | whether to show the guest list publically                                                                    |

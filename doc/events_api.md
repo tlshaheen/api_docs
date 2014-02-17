@@ -52,6 +52,7 @@ GET https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events?starting=2
       },
       "start_time": "2013-05-08T18:00:00-00:00",
       "end_time": "2013-05-08T21:00:00-00:00",
+      "time_zone": "Hawaii",
       "rsvp_form": {
         "phone": "hidden",
         "address": "hidden",
@@ -83,6 +84,7 @@ GET https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events?starting=2
         "id": 1,
         "start_time": "2013-05-17T10:50:17-00:00",
         "end_time": "2013-05-17T11:55:17-00:00",
+        "time_zone": "Hawaii",
         "goal": 15,
       }]
     },
@@ -110,6 +112,7 @@ GET https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events?starting=2
       },
       "start_time": "2013-03-01T18:00:00-00:00",
       "end_time": "2013-03-01T21:00:00-00:00",
+      "time_zone": "Hawaii",
       "rsvp_form": {
         "phone": "hidden",
         "address": "hidden",
@@ -230,6 +233,7 @@ GET https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events/1
     },
     "start_time": "2013-02-07T18:00:00-00:00",
     "end_time": "2013-02-07T21:00:00-00:00",
+    "time_zone": "Hawaii",
     "rsvp_form": {
       "phone": "hidden",
       "address": "hidden",
