@@ -17,28 +17,28 @@ Resources
 * `donor` - a donor resource representing the donor
 * `failed_at` - timestamp representing when the Donation failed
 * `id` - id of the Donation
-* `import_id` - TODO
+* `import_id` - id of the import job (if the Donation was imported)
 * `is_private` - false if the donation should not be posted publicly on the site
-* `mailing_slug` - TODO
-* `merchant_account_id` - TODO
-* `ngp_id` - TODO
+* `mailing_slug` - slug of the mailing page
+* `merchant_account_id` - id of the merchant account used for paying the donation
+* `ngp_id` - an id which is present if the donor has been imported from NGP VAN
 * `note` - a note to attach to this Donation
-* `page_slug` - TODO
+* `page_slug` - slug of the donation page
 * `payment_type_name` - name of the [payment type](http://nationbuilder.com/what_are_the_valid_payment_types_for_imports)
 * `payment_type_ngp_code` - code of the [payment type](http://nationbuilder.com/what_are_the_valid_payment_types_for_imports)
-* `pledge_id` - TODO
+* `pledge_id` - the id of the pledge this donation fulfills.  Pledges are promises received from supporters to donate money in the future.
 * `recruiter_name_or_email` - recruiter's name or email address
-* `recurring_donation_id` - TODO
+* `recurring_donation_id` - an id present if the donation is recurring
 * `succeeded_at` - timestamp representing when the Donation succeeded
-* `tracking_code_slug` - TODO
+* `tracking_code_slug` - tracking code for this Donation
 * `updated_at` - timestamp representing when the Donation was updated
 * `work_address` - an address resource representing the work address
 
 Visible only if the Voter addon is enabled:
 
-* `actblue_order_number` - TODO
-* `doing_business_with_nyc_agency` - TODO
-* `doing_business_with_nyc_business_category` - TODO
+* `actblue_order_number` - ActBlue order number
+* `doing_business_with_nyc_agency` - true if affiliation is declared with an organization that does business with NYC government agencies
+* `doing_business_with_nyc_business_category` - category of the business the organization does with NYC government agencies
 * `fec_type` - [FEC code name](http://nationbuilder.com/what_are_the_valid_fec_codes_for_import)
 * `fec_type_ngp_code` - [NGP FEC code](http://nationbuilder.com/what_are_the_valid_fec_codes_for_import)
 * `election` - an election resource representing an election
