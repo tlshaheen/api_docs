@@ -50,8 +50,8 @@ GET https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events?starting=2
         "email": "foobarevents@mailinator.com",
         "show_email": true
       },
-      "start_time": "2013-05-08T18:00:00-07:00",
-      "end_time": "2013-05-08T21:00:00-07:00",
+      "start_time": "2013-05-08T18:00:00-00:00",
+      "end_time": "2013-05-08T21:00:00-00:00",
       "rsvp_form": {
         "phone": "hidden",
         "address": "hidden",
@@ -81,8 +81,8 @@ GET https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events?starting=2
       },
       "shifts": [{
         "id": 1,
-        "start_time": "2013-05-17T10:50:17-07:00",
-        "end_time": "2013-05-17T11:55:17-07:00",
+        "start_time": "2013-05-17T10:50:17-00:00",
+        "end_time": "2013-05-17T11:55:17-00:00",
         "goal": 15,
       }]
     },
@@ -108,8 +108,8 @@ GET https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events?starting=2
         "email": null,
         "show_email": true
       },
-      "start_time": "2013-03-01T18:00:00-08:00",
-      "end_time": "2013-03-01T21:00:00-08:00",
+      "start_time": "2013-03-01T18:00:00-00:00",
+      "end_time": "2013-03-01T21:00:00-00:00",
       "rsvp_form": {
         "phone": "hidden",
         "address": "hidden",
@@ -156,8 +156,8 @@ POST https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events
     "name": "Fasting Day",
     "intro": "Take the 24hr nofoodchallenge!!!",
     "time_zone": "-07:00",
-    "start_at": "2013-05-08T17:00:00-07:00",
-    "end_at": "2013-05-08T19:00:00-07:00",
+    "start_at": "2013-05-08T17:00:00-00:00",
+    "end_at": "2013-05-08T19:00:00-00:00",
     "contact": {
       "name": "Byron Anderson",
       "contact_phone": "1234567890",
@@ -228,8 +228,8 @@ GET https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events/1
       "email": null,
       "show_email": true
     },
-    "start_time": "2013-02-07T18:00:00-08:00",
-    "end_time": "2013-02-07T21:00:00-08:00",
+    "start_time": "2013-02-07T18:00:00-00:00",
+    "end_time": "2013-02-07T21:00:00-00:00",
     "rsvp_form": {
       "phone": "hidden",
       "address": "hidden",

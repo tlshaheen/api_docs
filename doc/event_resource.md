@@ -14,8 +14,8 @@
 | intro        | optional      | Lets change the world!               | introductory information about the event                                                                     |
 | calendar_id  | optional      | 12345                                | ID of the calendar on which this event should appear                                                         |
 | contact      | optional      |                                      | Information about the point of contact for the event                                                         |
-| start_time   | required      | 2013-09-23T06:00:00-07:00            | When the event starts                                                                                        |
-| end_time     | required      | 2013-09-23T07:00:00-07:00            | When the event ends                                                                                          |
+| start_time   | required      | 2013-09-23T06:00:00-00:00            | When the event starts                                                                                        |
+| end_time     | required      | 2013-09-23T07:00:00-00:00            | When the event ends                                                                                          |
 | rsvp_form    | optional      |                                      | details about the form users will fill out to (leave out and the event will not accept RSVPs)                |
 | capacity     | optional      | 30                                   | The event's capacity for attendees                                                                           |
 | show_guests  | optional      | true                                 | whether to show the guest list publically                                                                    |
