@@ -12,22 +12,22 @@ Resources
 * `billing_address` - an address resource representing the billing address
 * `canceled_at` - timestamp representing when the Donation was canceled
 * `check_number` - check/wire/MO number
-* `corporate_contribution` - TODO
+* `corporate_contribution` - true if the Donation is corporate contribution
 * `created_at` - timestamp representing when the Donation was created
-* `donor` - TODO DonorResource
-* `failed_at` - TODO
+* `donor` - a donor resource representing the donor
+* `failed_at` - timestamp representing when the Donation failed
 * `id` - id of the Donation
 * `import_id` - TODO
 * `is_private` - false if the donation should not be posted publicly on the site
 * `mailing_slug` - TODO
 * `merchant_account_id` - TODO
 * `ngp_id` - TODO
-* `note` - TODO
+* `note` - a note to attach to this Donation
 * `page_slug` - TODO
 * `payment_type_name` - name of the [payment type](http://nationbuilder.com/what_are_the_valid_payment_types_for_imports)
 * `payment_type_ngp_code` - code of the [payment type](http://nationbuilder.com/what_are_the_valid_payment_types_for_imports)
 * `pledge_id` - TODO
-* `recruiter_name_or_email` - TODO
+* `recruiter_name_or_email` - recruiter's name or email address
 * `recurring_donation_id` - TODO
 * `succeeded_at` - timestamp representing when the Donation succeeded
 * `tracking_code_slug` - TODO
@@ -39,9 +39,9 @@ Visible only if the Voter addon is enabled:
 * `actblue_order_number` - TODO
 * `doing_business_with_nyc_agency` - TODO
 * `doing_business_with_nyc_business_category` - TODO
-* `fec_type` - TODO
-* `fec_type_ngp_code` - TODO
-* `election` - TODO ElectionResource
+* `fec_type` - [FEC code name](http://nationbuilder.com/what_are_the_valid_fec_codes_for_import)
+* `fec_type_ngp_code` - [NGP FEC code](http://nationbuilder.com/what_are_the_valid_fec_codes_for_import)
+* `election` - an election resource representing an election
 
 ### Donor Resource
 
@@ -65,9 +65,9 @@ Visible only if the Voter addon is enabled:
 
 ### Election Resource
 
-* `cycle` - TODO
-* `period` - TODO
-* `period_ngp_code` - TODO
+* `cycle` - election cycle
+* `period` - election period
+* `period_ngp_code` - NGP code of the election period
 
 Index Endpoint
 --------------
