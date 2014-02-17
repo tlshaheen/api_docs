@@ -257,7 +257,7 @@ PUT /api/v1/donations/:id
 Make this request (assuming you have a Donation with id 89):
 
 ```
-PUT /api/v1/donations/87
+PUT /api/v1/donations/89
 ```
 
 With request body like this:
