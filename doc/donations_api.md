@@ -6,7 +6,7 @@ Resources
 
 ### Donation Resource
 
-* `amount` - amount of donation
+* `amount` - amount of donation in the nation's currency unit
 * `amount_in_cents` - amount of donation in cents
 * `author_id` - id of the person who created the donation
 * `billing_address` - an address resource representing the billing address
