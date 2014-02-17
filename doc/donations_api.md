@@ -6,7 +6,7 @@ Resources
 
 ### Donation Resource
 
-* `amount` - amount of donation in the nation's currency unit
+* `amount` - amount of donation in the nation's currency
 * `amount_in_cents` - amount of donation in cents
 * `author_id` - id of the person who created the donation
 * `billing_address` - an address resource representing the billing address
@@ -157,7 +157,7 @@ GET https://foobar.nationbuilder.com/api/v1/donations?page=2&per_page=1
 Create Endpoint
 ---------------
 
-The endpoint creates a donation with the provided data.  Returns a full representation of the donation which was created.  Returns errors if the creation fails.
+This endpoint creates a donation with the provided data. It returns a full representation of the donation that was created. If the creation step fails, it returns an error.
 
 ```
 POST /api/v1/donations
@@ -242,7 +242,7 @@ You will receive a response of status 200, with response body like this:
 Update Endpoint
 ---------------
 
-The endpoint updates the donation with the provided id to have the provided data. Returns a full representation of the updated donation.  Returns errors if the updating fails.
+This endpoint updates a donation with the provided id and data.  It returns a full representation of the updated donation.  If the update step fails, it returns an error.
 
 ```
 PUT /api/v1/donations/:id
@@ -324,7 +324,7 @@ You will receive a response of status 200 and body response like this:
 Destroy Endpoint
 ----------------
 
-The endpoint removes the donation with the provided id.  Takes no parameters, returns response code 204 on success.
+This endpoint removes a donation with the provided id.  It takes no parameters and returns response code 204 on success.
 
 ```
 DELETE /api/v1/donations/:id
