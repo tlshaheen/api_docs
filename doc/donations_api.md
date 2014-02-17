@@ -8,30 +8,30 @@ Resources
 
 * `amount` - amount of donation
 * `amount_in_cents` - amount of donation in cents
-* `author_id` - id of the person who created the Donation
+* `author_id` - id of the person who created the donation
 * `billing_address` - an address resource representing the billing address
-* `canceled_at` - timestamp representing when the Donation was canceled
+* `canceled_at` - timestamp representing when the donation was canceled
 * `check_number` - check/wire/MO number
-* `corporate_contribution` - true if the Donation is corporate contribution
-* `created_at` - timestamp representing when the Donation was created
+* `corporate_contribution` - true if the donation is a corporate contribution
+* `created_at` - timestamp representing when the donation was created
 * `donor` - a donor resource representing the donor
-* `failed_at` - timestamp representing when the Donation failed
-* `id` - id of the Donation
-* `import_id` - id of the import job (if the Donation was imported)
+* `failed_at` - timestamp representing when the donation failed
+* `id` - id of the donation
+* `import_id` - id of the import job (if the donation was imported)
 * `is_private` - false if the donation should not be posted publicly on the site
 * `mailing_slug` - slug of the mailing page
 * `merchant_account_id` - id of the merchant account used for paying the donation
 * `ngp_id` - an id which is present if the donor has been imported from NGP VAN
-* `note` - a note to attach to this Donation
+* `note` - a note for this donation
 * `page_slug` - slug of the donation page
 * `payment_type_name` - name of the [payment type](http://nationbuilder.com/what_are_the_valid_payment_types_for_imports)
 * `payment_type_ngp_code` - code of the [payment type](http://nationbuilder.com/what_are_the_valid_payment_types_for_imports)
 * `pledge_id` - the id of the pledge this donation fulfills.  Pledges are promises received from supporters to donate money in the future.
 * `recruiter_name_or_email` - recruiter's name or email address
 * `recurring_donation_id` - an id present if the donation is recurring
-* `succeeded_at` - timestamp representing when the Donation succeeded
-* `tracking_code_slug` - tracking code for this Donation
-* `updated_at` - timestamp representing when the Donation was updated
+* `succeeded_at` - timestamp representing when the donation succeeded
+* `tracking_code_slug` - tracking code for this donation
+* `updated_at` - timestamp representing when the donation was updated
 * `work_address` - an address resource representing the work address
 
 Visible only if the Voter addon is enabled:
@@ -46,11 +46,11 @@ Visible only if the Voter addon is enabled:
 ### Donor Resource
 
 * `id` - id of the person who donated
-* `first_name` - the person's first name and middle names
+* `first_name` - the person's first name and middle name
 * `last_name` - the person's last name
 * `email` - the person's email address
-* `employer` - name of the company for which they work
-* `occupation` - what work they do for their employer
+* `employer` - their employer's name
+* `occupation` - their occupation
 
 ### Address Resource
 
@@ -157,7 +157,7 @@ GET https://foobar.nationbuilder.com/api/v1/donations?page=2&per_page=1
 Create Endpoint
 ---------------
 
-Creates a Donation with the provided data.  Returns a full representation of the Donation which was created.  Returns errors if the creation fails.
+The endpoint creates a donation with the provided data.  Returns a full representation of the donation which was created.  Returns errors if the creation fails.
 
 ```
 POST /api/v1/donations
@@ -165,7 +165,7 @@ POST /api/v1/donations
 
 ### Parameters
 
-* `donation` - the resource of the Donation to be created
+* `donation` - the resource of the donation to be created
 
 ### Example
 
@@ -242,7 +242,7 @@ You will receive a response of status 200, with response body like this:
 Update Endpoint
 ---------------
 
-Updates the Donation with the provided id to have the provided data. Returns a full representation of the updated Donation.  Returns errors if the updating fails.
+The endpoint updates the donation with the provided id to have the provided data. Returns a full representation of the updated donation.  Returns errors if the updating fails.
 
 ```
 PUT /api/v1/donations/:id
@@ -250,11 +250,11 @@ PUT /api/v1/donations/:id
 
 ### Parameters
 
-* `donation` - the resource attributes of the Donation to change
+* `donation` - the resource attributes of the donation to change
 
 ### Example
 
-Make this request (assuming you have a Donation with id 89):
+Make this request (assuming you have a donation with id 89):
 
 ```
 PUT /api/v1/donations/89
@@ -323,7 +323,8 @@ You will receive a response of status 200 and body response like this:
 
 Destroy Endpoint
 ----------------
-Removes the Donation with the provided id.  Takes no parameters, returns response code 204 on success.
+
+The endpoint removes the donation with the provided id.  Takes no parameters, returns response code 204 on success.
 
 ```
 DELETE /api/v1/donations/:id
