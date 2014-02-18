@@ -67,7 +67,7 @@ Visible only if the Voter addon is enabled:
 
 * `cycle` - election cycle
 * `period` - election period
-* `period_ngp_code` - NGP code of the election period
+* `period_ngp_code` - [election period code](http://nationbuilder.com/what_are_the_valid_election_period_codes_for_imports)
 
 Index Endpoint
 --------------
