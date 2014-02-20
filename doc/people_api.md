@@ -54,6 +54,8 @@ Resources
 * `fire_district` - district field
 * `precinct_id` - id of the precinct to attach to this person, as found in the precincts API
 * `party` - a one-letter code representing [provincial parties for nations](http://nationbuilder.com/support_for_international_parties)
+* `rnc_id` - their id from RNC
+* `rnc_regid` - their registration id from RNC
 
 ### Address Resource
 
