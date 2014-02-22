@@ -286,12 +286,10 @@ With attached body content like this:
 {
   "donation": {
       "amount_in_cents": 1000,
+      "first_name": "Sarah",
+      "last_name": "Kerrigan"
       "payment_type_name": "Cash",
       "tracking_code_slug": "foo_bar",
-      "donor": {
-          "first_name": "Sarah",
-          "last_name": "Kerrigan"
-      }
   }
 }
 ```
