@@ -419,7 +419,7 @@ With request body like this:
 {
   "donation": {
       "donor": {
-          "email": "sarah@example.com"
+          "occupation": "campaign manager"
       }
   }
 }
@@ -516,7 +516,7 @@ You will receive a response of status 200 and body response like this:
       "merchant_account_id": null,
       "ngp_id": null,
       "note": null,
-      "occupation": null,
+      "occupation": "campaign manager",
       "page_slug": null,
       "payment_type_name": "Cash",
       "payment_type_ngp_code": "C",
