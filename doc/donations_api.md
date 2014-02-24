@@ -99,6 +99,8 @@ Visible only if the Voter addon is enabled:
 * `fire_district` - district field
 * `precinct_id` - id of the precinct attached to this person, as found in the precincts API
 * `party` - a one-letter code representing [provincial parties for nations](http://nationbuilder.com/support_for_international_parties)
+* `rnc_id` - their id from RNC
+* `rnc_regid` - their registration id from RNC
 
 ### Address Resource
 
@@ -222,7 +224,9 @@ GET https://foobar.nationbuilder.com/api/v1/donations?page=2&per_page=1
               "village_district": null,
               "fire_district": null,
               "precinct_id": null,
-              "party": null
+              "party": null,
+              "rnc_id": null,
+              "rnc_regid": null
           },
           "election": {
               "cycle": "2013",
@@ -358,7 +362,9 @@ You will receive a response of status 200, with response body like this:
           "village_district": null,
           "fire_district": null,
           "precinct_id": null,
-          "party": null
+          "party": null,
+          "rnc_id": null,
+          "rnc_regid": null
       },
       "election": null,
       "email": null,
@@ -497,7 +503,9 @@ You will receive a response of status 200 and body response like this:
           "village_district": null,
           "fire_district": null,
           "precinct_id": null,
-          "party": null         
+          "party": null,
+          "rnc_id": null,
+          "rnc_regid": null                   
       },
       "election": null,
       "email": "sarah@example.com",
