@@ -245,7 +245,9 @@ POST https://www.example.com/webhook
         "village_district": null,
         "fire_district": null,
         "precinct_id": null,
-        "party": null
+        "party": null,
+        "rnc_id": null,
+        "rnc_regid": null
       },
       "election": null,
       "email": "joe@example.com",
