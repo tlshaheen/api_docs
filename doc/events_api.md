@@ -159,8 +159,8 @@ POST https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events
     "name": "Fasting Day",
     "intro": "Take the 24hr nofoodchallenge!!!",
     "time_zone": "-07:00",
-    "start_at": "2013-05-08T17:00:00-00:00",
-    "end_at": "2013-05-08T19:00:00-00:00",
+    "start_time": "2013-05-08T17:00:00-00:00",
+    "end_time": "2013-05-08T19:00:00-00:00",
     "contact": {
       "name": "Byron Anderson",
       "contact_phone": "1234567890",
