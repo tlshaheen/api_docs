@@ -12,7 +12,7 @@ These are the steps necessary to start using the API:
 
 1. Register the application
 
-    Log into your nation, navigate to Settings > Apps > New App. Register your application with a name and redirect URI. After you register, make sure to record the UID and Secret codes provided here for future use.
+    Log into your nation, navigate to Settings > Apps > New App. Register your application with a name and OAuth callback URL. After you register, make sure to record the Client ID and Client Secret codes provided here for future use.
 
 2. Ask a nation's administrator for access
 
