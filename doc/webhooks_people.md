@@ -1,6 +1,8 @@
 People Webhooks
 ===============
 
+People webhooks payloads are generated in response to certain changes to your people records.
+
 ### Person Created and Person Changed
 
 ```POST http://www.example.com/webhook```

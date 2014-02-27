@@ -1,7 +1,7 @@
 Donation Webhooks
-===============
+=================
 
-
+Donation webhook payloads are generated in response to certain one-time and recurring donations within your nation.
 
 ### Donation Succeeded, Donation Changed, Donation Canceled
 

@@ -1,7 +1,7 @@
 Webhooks
 ========
 
-Webhooks are a way to interact with an application by telling it to tell your services about certain events as they occur.
+Webhooks provide a way for NationBuilder to inform your application or service about certain events as they occur within your nation. To accept a webhook, you need to set up a web server that can receive HTTP POST connections from NationBuilder, and to register your endpoint URL within your nation settings. Whenever an event occurs, NationBuilder will an appropriate payload to your endpoint.
 
 You can use this, for example, to synchronize external representations of resources with events that happen in NationBuilder.
 
