@@ -3,7 +3,7 @@ NationBuilder API Rate Limit Policy
 
 Updated 19 August 2013
 
-Our rate limit is composed of two independent rate limits- per-IP address and per-nation.
+Our rate limit is composed of two independent rate limits -- per-IP address and per-nation.
 
 The nation rate limit is meant to allow for an application to provide to many nations without penalty, in the same way that twitter applications are on a per-user basis.
 
