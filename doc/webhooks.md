@@ -16,6 +16,13 @@ This is the list of webhook events that NationBuilder supports:
 
 In order to determine whether to trust a request your server receives, you can attach a shared secret token to your nation which will be attached to the payload via the key `token`.  For this to be effective, make sure that your webhook recipient application uses HTTPS to communicate.
 
+Versioning
+----------
+
+All webhooks are associated with a payload version. When you register your webhook, you will be associating it with the then-current payload version. A version guarantees that fields in the payload will not be removed, nor will their format or meaning be changed. Fields may, however, be added from time to time.
+
+If at any point in time NationBuilder must change the meaning or format of a field, or remove it from the payload, we will increment the version number for newly-created webhooks, while continuing to send the older data to existing webhooks. If you would like to upgrade to the latest version, you will need to delete and re-create the webhook for your nation.
+
 Subnations
 ----------
 
@@ -24,7 +31,7 @@ Nations with subnations can register webhooks that will be triggered only by eve
 Samples
 -------
 
-You can use a tool like [requestb.in](http://requestb.in/) to record sample webhook requests, here are some premade samples:
+You can use a tool like [requestb.in](http://requestb.in/) to record sample webhook requests. Here are some premade samples:
 
 ### Person Creation/Update
 
@@ -498,8 +505,7 @@ POST http://www.example.com/webhook
 Samples for earlier webhook versions
 ------------------------------------
 
-Donation webhooks created before Feb 25, 2014 will keep receiving an earlier version of webhook payload.
-For the donation webhook to return the most recent version of the payload the existing donation webhook has to be deleted first and the re-registered. 
+Donation webhooks created before Feb 25, 2014 (version 2 and below) will keep receiving an earlier version of webhook payload. For the donation webhook to return the most recent version of the payload, the existing donation webhook has to be deleted first and the re-registered. 
 
 ### Donation Success/Update/Cancel
 
@@ -673,6 +679,32 @@ POST https://www.example.com/webhook
           "fips": null
         }
       }
+    }
+  }
+}
+```
+
+Custom Fields
+-------------
+If [custom fields](http://nationbuilder.com/custom_fields) are set for your nation they will be included in the POST request body along with the other person or donation fields.
+
+### Example
+If, for example, your nation happened to care about the height of a person and you registered a custom field 'height' then it would be visible in the POST request body which gets sent to the URI defined for your registered webhook:
+
+```json
+{
+  "token": "sharedsecret",
+  "payload": {
+    "signup": {
+      "nationbuilder_id": 85462,
+      "first_name": "John",
+      "last_name": "Doe",
+      "full_name": "John Doe",
+      "email1": "johndoe@example.com",
+
+      ...
+
+      "height": 72
     }
   }
 }
