@@ -23,7 +23,7 @@ Versioning
 
 All webhooks are associated with a payload version. When you register your webhook, you will be associating it with the then-current payload version. A version guarantees that fields in the payload will not be removed, nor will their format or meaning be changed. Fields may, however, be added from time to time.
 
-If at any point in time NationBuilder must change the meaning or format of a field, or remove it from the payload, we will increment the version number for newly-created webhooks, while continuing to send the older data to existing webhooks. If you would like to upgrade to the latest version, you will need to delete and re-create the webhook for your nation.
+If at any point in time NationBuilder must change the meaning or format of a field, or remove it from the payload, we will increment the version number for newly-created webhooks, while continuing to send the older data to existing webhooks. If you would like to upgrade to the latest version, edit the webhook and increment the payload version.
 
 Subnations
 ----------
