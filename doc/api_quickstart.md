@@ -2,13 +2,15 @@ API Authentication Quick-Start Guide
 ====================================
 
 Preliminary: If you already have an account, just login to the control panel and
-continue below. Otherwise, email api@nationbuilder.com to request a free account,
+continue below. Otherwise, email [api@nationbuilder.com](mailto:api@nationbuilder.com) to request a free account,
 and specify your desired slug, joeyforprez, for example. This slug will be used in your
 NationBuilder URL, joeyforprez.nationbuilder.com. This cannot be changed; we
 recommend using your organization or company name. You will get a response with
 within one working day.
 
-These are the steps necessary to start using the API:
+If you want to begin testing the API from your own nation or are building an app for a single customer, you can use test tokens to get started immediately. In your nation's control panel, go to Settings > Apps > Test tokens.
+
+These are the steps necessary to start using the API to access resources through OAuth:
 
 1. Register the application
 
@@ -78,4 +80,4 @@ These are the steps necessary to start using the API:
 
     Note that the API speaks only in javascript object notation (JSON), and that 406 response code means that you need to include the Content-Type and Accept headers of your request to "application/json".
 
-Please direct API-related questions to NationBuilder VP of Community [Adriel Hampton](mailto:ahampton@nationbuilder.com)
+Please direct API-related questions to NationBuilder Platform Director [Arion Hardison](mailto:ahardison@nationbuilder.com)
