@@ -61,6 +61,7 @@ Resources
 
 * `address1` - first address line
 * `address2` - second address line
+* `address3` - third address line
 * `city` - city
 * `state` - state
 * `zip` - zip code

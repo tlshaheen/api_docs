@@ -67,6 +67,7 @@ GET https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events?starting=2
         "address": {
           "address1": "",
           "address2": "",
+          "address3": "",
           "city": "Pasadena",
           "state": "CA",
           "country_code": "US",

@@ -19,6 +19,7 @@ Donation webhook payloads are generated in response to certain one-time and recu
       "billing_address": {
           "address1": "123 Fake St",
           "address2": "Apt 1905",
+          "address3": "Suite 5A",
           "city": "Pasadena",
           "state": "CA",
           "country_code": "US",
@@ -47,6 +48,7 @@ Donation webhook payloads are generated in response to certain one-time and recu
         "primary_address": {
           "address1": "123 Fake St",
           "address2": "Apt 1905",
+          "address3": "Suite 5A",
           "city": "Pasadena",
           "state": "CA",
           "country_code": "US",

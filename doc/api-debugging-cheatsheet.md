@@ -34,6 +34,7 @@ Should get a response like this if the person exists:
     "primary_address": {
       "address1": "123 Stevely Ave",
       "address2": null,
+      "address3": null,
       "city": "Long Beach",
       "state": "CA",
       "country_code": "US",
