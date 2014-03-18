@@ -39,6 +39,7 @@ Should get you a 200 response with body like this:
   "results": [
     {
       "id": "51f6d14dba6d1d31c0000003",
+      "version": 2,
       "url": "http://requestb.in/1hupspb1",
       "event": "person_contact"
     }
@@ -62,6 +63,7 @@ Should get you a 200 response with body like this:
 {
   "webhook": {
     "id": "51f6d14dba6d1d31c0000003",
+    "version": 2,
     "url": "http://requestb.in/1hupspb1",
     "event": "person_contact"
   }
@@ -74,6 +76,7 @@ Use this endpoint to register a webhook to fire on the occurance of a certain ev
 
 ### Attributes
 
+* `version` - the payload version you want to receive,
 * `url` - the URL you want to have the webhook fire towards
 * `event` - the event you want to observe (listed at top of page)
 
@@ -90,6 +93,7 @@ With this body:
 ```json
 {
   "webhook": {
+    "version": 2,
     "url": "https://example.com/webhook_reception",
     "event": "person_contact"
   }
@@ -102,6 +106,7 @@ Should create the webhook, respond with 200 and a body like this:
 {
   "webhook": {
     "id": "4ff7600b2cf0512fc7000002",
+    "version": 2,
     "url": "https://example.com/webhook_reception",
     "event": "person_contact"
   }
