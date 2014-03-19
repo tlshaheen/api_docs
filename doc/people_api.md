@@ -6,203 +6,204 @@ Resources
 
 ### Person Resource
 
-* `active_customer_expires_at` - 
-* `active_customer_started_at` - 
-* `author_id` - 
-* `author` - 
-* `auto_import_id` - 
-* `availability` - 
-* `banned_at` - 
-* `billing_address` - 
-* `bio` - 
+* `active_customer_expires_at` - The date at which to consider a customer no longer active
+* `active_customer_started_at` - The data from which a customer is consider active
+* `author_id` - the resource id of the author
+* `author` -  the resource representing the author
+* `auto_import_id` - the id given to a signup when it is auto imported
+* `availability` - date and time the person is available 
+* `banned_at` - the time and date the user was banned
+* `billing_address` - an address resource representing the billing address
+* `bio` - the bio information that the user provided on their public profile via the "short bio" field
 * `birthdate` - the person's birthdate
-* `call_status_id` - 
-* `call_status_name` - 
-* `capital_amount_in_cents` - 
-* `children_count` - 
-* `church` - 
+* `call_status_id` - the id of the call status associated with this person
+* `call_status_name` - within the context of a call this field is a status indicator for the person ie: undialed, in-progress, completed, busy, fail or no-answer
+* `capital_amount_in_cents` - this is the persons received_capital_amount_in_cents - spent_capital_amount_in_cents
+* `children_count` - the number of children the person resource has
+* `church` - the church that the person goes to
 * `city_district` - district field
-* `city_sub_district` - 
+* `city_sub_district` - district field
 * `civicrm_id` - their id from CiviCRM
-* `closed_invoices_amount_in_cents` - 
-* `closed_invoices_count` - 
-* `contact_status_id` - 
-* `contact_status_name` - 
-* `could_vote_status` - 
+* `closed_invoices_amount_in_cents` - the aggregate amount of all this persons closed invoices in cents.
+* `closed_invoices_count` - the number of closed invoices associated with this person 
+* `contact_status_id` - id of the contact status associated with this person
+* `contact_status_name` - name of the contact status associated with this person
+* `could_vote_status` - boolean indicating if this person could vote in an election or not
 * `county_district` - district field
 * `county_file_id` - their id from a county voter file
 * `created_at` - timestamp representing when the person was created
-* `custom_values` - 
+* `custom_values` - this is the keys of all of this person's custom fields 
 * `demo` - 
-* `do_not_call` - 
-* `do_not_contact` - 
-* `donations_amount_in_cents` - 
-* `donations_amount_this_cycle_in_cents` - 
-* `donations_count_this_cycle` - 
-* `donations_count` - 
-* `donations_pledged_amount_in_cents` - 
-* `donations_raised_amount_in_cents` - 
-* `donations_raised_amount_this_cycle_in_cents` - 
-* `donations_raised_count_this_cycle` - 
-* `donations_raised_count` - 
-* `donations_to_raise_amount_in_cents` - 
+* `do_not_call` - this is a boolean flag that lets us know if this person is on a do not call list
+* `do_not_contact` - this is a boolean flag that lets us know if this person is on a do not contact list
+* `donations_amount_in_cents` - aggregate amount of all this persons donations in cents 
+* `donations_amount_this_cycle_in_cents` - the aggregate value of the donations made this cycle in cents 
+* `donations_count_this_cycle` - the number of donations this person made this cycle
+* `donations_count` - the total number of donations made by this person
+* `donations_pledged_amount_in_cents` - the aggregate amount of the donations pledged by this person in cents
+* `donations_raised_amount_in_cents` - the aggregate amount of the donations raised by this person in cents 
+* `donations_raised_amount_this_cycle_in_cents` - the aggregate value of all donations raised this cycle by this person
+* `donations_raised_count_this_cycle` - the number of donations raised this cycle by this person
+* `donations_raised_count` - the total number of donations raised
+* `donations_to_raise_amount_in_cents` - the goal amount of donations for this person to raise in cents 
 * `dw_id` - their id from Catalist
-* `email1_is_bad` - 
-* `email1` - 
-* `email2_is_bad` - 
-* `email2` - 
-* `email3_is_bad` - 
-* `email3` - 
-* `email4_is_bad` - 
-* `email4` - 
+* `email1_is_bad` - boolean indicating if email1 for this person is bad
+* `email1` - a secondary email for this person
+* `email2_is_bad` - boolean indicating if email2 for this person is bad
+* `email2` - a secondary email for this person
+* `email3_is_bad` - boolean indicating if email3 for this person is bad
+* `email3` - a secondary email for this person
+* `email4_is_bad` - boolean indicating if email4 for this person is bad
+* `email4` - a secondary email for this person
 * `email_opt_in` - boolean representing whether the person has opted-in to email correspondence
 * `email` - the person's email address
 * `employer` - name of the company for which they work
-* `ethnicity` - 
+* `ethnicity` - the ethnicity of this person ie: Black, White etc...
 * `external_id` - string representing an external identifier for this person
 * `facebook_address` - 
-* `facebook_profile_url` - 
-* `facebook_updated_at` - 
-* `facebook_username` - 
-* `fax_number` - 
+* `facebook_profile_url` - the url of this users facebook profile
+* `facebook_updated_at` - the date and time this person's facebook info was last updated
+* `facebook_username` - this person's facebook username
+* `fax_number` - the fax number associated with this person
 * `federal_district` - district field
-* `federal_donotcall` - 
+* `federal_donotcall` - boolean value indicating if this user is on the federal do not call list
 * `fire_district` - district field
-* `first_donated_at` - 
-* `first_fundraised_at` - 
-* `first_invoice_at` - 
+* `first_donated_at` - date and time of this person's first donation
+* `first_fundraised_at` -  date and time that this person first fundraised
+* `first_invoice_at` - date and time of this person's first invoice
 * `first_name` - the person's first name and middle names
-* `first_prospect_at` - 
-* `first_recruited_at` - 
-* `first_supporter_at` - 
-* `first_volunteer_at` - 
-* `full_name` - 
+* `first_prospect_at` - date and time that this user first became a prospect 
+* `first_recruited_at` - date and time that this user was first recruited
+* `first_supporter_at` - date and time that this user became a supporter for the first time
+* `first_volunteer_at` - date and time that this person first volunteered 
+* `full_name` - the person’s full name
 * `has_facebook` - whether the person record has facebook information attached
-* `home_address` - an address resource representing the person's home
-* `id` - 
-* `import_id` - 
-* `inferred_party` - 
+* `home_address` - an address resource representing the home address
+* `id` - id of the person
+* `import_id` - the id associated with this person when they were imported
+* `inferred_party` - this field is used to indicate the party the person is believed to be associated with.  this inference is not done by NB or imported from pforce rather its done via modeling by API users.
 * `inferred_support_level` - 
 * `invoice_payments_amount_in_cents` - 
-* `invoice_payments_referred_amount_in_cents` - 
-* `invoices_amount_in_cents` - 
-* `invoices_count` - 
-* `is_deceased` - 
-* `is_donor` - 
-* `is_fundraiser` - 
-* `is_ignore_donation_limits` - 
-* `is_leaderboardable` - 
+* `invoice_payments_referred_amount_in_cents` - the aggregate amount of invoice payments made by recruits of this person in cents
+* `invoices_amount_in_cents` - the aggregate amount of all a persons invoices in cents
+* `invoices_count` - the number of invoices the person has
+* `is_deceased` - boolean field that indicates if the person is alive or not
+* `is_donor` - boolean field that indicates if the person has donated
+* `is_fundraiser` - boolean value that indicates if this person has previously fundraised 
+* `is_ignore_donation_limits` - this is so when someone adds a new donation that isn't associated with a person yet, they can check a box to ignore donation limits and then it will set their whole account to ignore the limits
+* `is_leaderboardable` - boolean that tells if this user is allowed to show up on the leaderboard or not 
 * `is_mobile_bad` - 
-* `is_possible_duplicate` - 
-* `is_profile_private` - 
-* `is_profile_searchable` - 
-* `is_prospect` - 
-* `is_supporter` - 
-* `is_survey_question_private` - 
+* `is_possible_duplicate` - boolean field that indicates if the NB matching algorithm thinks this person is a duplicate.
+* `is_profile_private` - boolean that tells if the persons profile is private or not 
+* `is_profile_searchable` - boolean that tells if the persons profile is allowed to show up in search results 
+* `is_prospect` - boolean field that indicates if this person is a prospect
+* `is_supporter` - boolean field that indicates if this person is a supporter
+* `is_survey_question_private` - boolean field that indicates if this survey question is private
 * `is_twitter_follower` - whether the person is a twitter follower
 * `is_volunteer` - boolean representing whether the person has volunteered
 * `judicial_district` - district field
 * `labour_region` - district field
-* `language` - 
-* `last_call_id` - 
-* `last_contacted_at` - 
-* `last_contacted_by` - 
-* `last_donated_at` - 
-* `last_fundraised_at` - 
-* `last_invoice_at` - 
+* `language` - the language that a user currently has set (I think right now this is derived   from the locale) 
+* `last_call_id` - the time and date of the last call to this person
+* `last_contacted_at` - the time and date of the last time they were contacted  
+* `last_contacted_by` - the signup id of the last user to contact the person
+* `last_donated_at` - the time and date of their last donation
+* `last_fundraised_at` - the time and date of the last time this person fundraised 
+* `last_invoice_at` - the time and date of this users last invoice
 * `last_name` - the person's last name
-* `last_rule_violation_at` - 
-* `legal_name` - 
+* `last_rule_violation_at` - the time and date of the persons last rule violation
+* `legal_name` - the full (legal) name of the person
 * `linkedin_id` - their id from LinkedIn
-* `locale` - 
-* `mailing_address` - 
-* `marital_status` - 
-* `media_market_name` - 
-* `meetup_address` - 
-* `membership_expires_at` - 
-* `membership_level_name` - 
-* `membership_started_at` - 
-* `middle_name` - 
-* `mobile_normalized` - 
+* `locale` - the ISO locale that the user has their account set to (US, ES, FR etc...)
+* `mailing_address` - an address resource representing the mailing address
+* `marital_status` - the person’s [marital status](http://nationbuilder.com/what_are_the_codes_for_marital_status_on_imports)
+* `media_market_name` -
+* `meetup_address` - the address of a meetup  
+* `membership_expires_at` - the time and date that this users membership expires 
+* `membership_level_name` - the name of the level of membership that this user created
+* `membership_started_at` - the time and date that this user started a membership
+* `middle_name` - the person’s middle name
+* `mobile_normalized` - the person's cell phone number in normalized form
 * `mobile_opt_in` - boolean representing whether the person has opted-in to mobile correspondence
 * `mobile` - the person's cell phone number
 * `nbec_guid` - their id from the NationBuilder Election Center
-* `nbec_precinct_code` - 
+* `nbec_precinct_code` - the unique identifer used to ID a user in NBEC
 * `ngp_id` - their id from NGP
-* `note_updated_at` - 
+* `note_updated_at` - the date and time the note attached to this person was updated
 * `note` - a note to attach to the person's profile
 * `occupation` - what work they do for their employer
-* `outstanding_invoices_amount_in_cents` - 
-* `outstanding_invoices_count` - 
-* `overdue_invoices_count` - 
+* `outstanding_invoices_amount_in_cents` - the aggregate value of all this persons outstanding invoices in cents
+* `outstanding_invoices_count` - the number of outstanding invoices this user has
+* `overdue_invoices_count` - the number of overdue invoices this user has
 * `page_slug` - 
-* `parent_id` - 
-* `parent` - 
-* `party_member` - 
+* `parent_id` - the resource id of this resources parent resource
+* `parent` - the parent of this resource
+* `party_member` - boolean that tells if this person is a member of a political party
 * `party` - a one-letter code representing [provincial parties for nations](http://nationbuilder.com/support_for_international_parties)
 * `pf_strat_id` - their id from PoliticalForce
-* `phone_normalized` - 
-* `phone_time` - 
+* `phone_normalized` - the person's home phone number in normalized form
+* `phone_time` - the time that has been selected as the best time to call this person
 * `phone` - the person's home phone number
-* `precinct_code` - 
+* `precinct_code` - the code of the precinct that this person lives in
 * `precinct_id` - id of the precinct to attach to this person, as found in the precincts API
-* `precinct_name` - 
-* `prefix` - 
-* `previous_party` - 
-* `primary_address` - 
-* `primary_email_id` - 
-* `priority_level_changed_at` - 
-* `priority_level` - 
-* `profile_content_html` - 
-* `profile_content` - 
-* `profile_headline` - 
-* `received_capital_amount_in_cents` - 
+* `precinct_name` - the name of the precinct that the user lives in
+* `prefix` - the name prefix chosen by a user ie: Mr, Mrs etc...
+* `previous_party` - the party this person had selected before their current party selection
+* `primary_address` - an address resource representing the primary address
+* `primary_email_id` - the resource id of the primary email address associated with this person
+* `priority_level_changed_at` - the date and time that the persons priority level changed
+* `priority_level` - the priority_level of associated with this person
+* `profile_content_html` - the profile content for the person public profile in htlm
+* `profile_content` - the content for the persons public profile
+* `profile_headline` - the headline for the persons public profile
+* `received_capital_amount_in_cents` - the aggregate amount of political capital ever received by this person 
 * `recruiter_id` - id of the person who recruited this person
-* `recruiter` - 
-* `recruits_count` - 
-* `registered_address` - 
-* `registered_at` - 
-* `religion` - 
+* `recruiter` - a person resource representing the person who recruited this person
+* `recruits_count` - the number of people that were recruited by this person
+* `registered_address` - an address resource representing the registered address
+* `registered_at`
+* `religion` - the religon of the user 
 * `rnc_id` - their id from RNC
 * `rnc_regid` - their registration id from RNC
-* `rule_violations_count` - 
+* `rule_violations_count` - the number of times the user has violated one of the nations rules
 * `salesforce_id` - their id from salesforce
 * `school_district` - district field
 * `school_sub_district` - district field
 * `sex` - the person's sex (M or F)
-* `spent_capital_amount_in_cents` - 
+* `spent_capital_amount_in_cents` - the aggregate amount of capital ever spent by this person (in cents) 
 * `state_file_id` - their id from a state voter file
 * `state_lower_district` - district field
 * `state_upper_district` - district field
-* `submitted_address` - 
-* `subnations` - 
-* `suffix` - 
-* `support_level_changed_at` - 
+* `submitted_address` - the address the user submitted
+* `subnations` - array of subnations that this person belongs to 
+* `suffix` - the suffix the person uses w/ their name ie: Jr, Sr or III etc...
+* `support_level_changed_at` - the time and date that the persons support level changed 
 * `support_level` - level of support the person has for your nation, expressed as a number between 1 and 5, 1 being Strong support, 5 meaning strong opposition, and 3 meaning undecided.
-* `support_probability_score` - 
+* `support_probability_score` - the likely hood that they will support you at election time
 * `supranational_district` - district field
 * `tags` - the tags assigned to the person, as an array of strings (setting via this API has been deprecated, use the people tags API)
-* `turnout_probability_score` - 
-* `twitter_address` - 
-* `twitter_description` - 
-* `twitter_followers_count` - 
-* `twitter_friends_count` - 
+* `turnout_probability_score` - the probability that they will turnout to vote
+* `twitter_address` - the url of the users twitter profile
+* `twitter_description` - the description that the user provided on tiwtter
+* `twitter_followers_count` - the number of followers the person has on twitter 
+* `twitter_friends_count` - the number of friends the person has on twitter
 * `twitter_id` - id from twitter
-* `twitter_location` - 
-* `twitter_login` - 
+* `twitter_location` - the location the person listed on twitter
+* `twitter_login` - the persons twitter login
 * `twitter_name` - twitter handle, e.g. FoobarSoftwares
-* `twitter_updated_at` - 
-* `twitter_website` - 
-* `unsubscribed_at` - 
+* `twitter_updated_at` - the last time the persons twitter record was updated
+* `twitter_website` - the url of the website that the person listed on twitter
+* `unsubscribed_at` - the date/time that the person unsubscribed
 * `updated_at` - timestamp representing when the person was last updated
-* `user_submitted_address` - 
-* `username` - 
+* `user_submitted_address` - an address resource representing the address the user submitted
+* `username` - the persons username
 * `van_id` - their id from VAN
 * `village_district` - district field
-* `warnings_count` - 
-* `website` - 
-* `work_address` - 
-* `work_phone_number` - 
+* `warnings_count` - the number of warnings a person has received
+* `website` - the url of the persons website
+* `work_address` - an address resource representing the work address
+* `work_phone_number` - a phone number representing the place the person works
+
 
 ### Address Resource
 
