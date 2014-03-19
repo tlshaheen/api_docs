@@ -124,7 +124,8 @@ Donation webhook payloads are generated in response to certain one-time and recu
       "work_address": null
     }
   },
-  "token": "sharedsecret"
+  "token": "sharedsecret",
+  "version": 4
 }
 ```
 
@@ -140,7 +141,7 @@ Donation webhooks created before Feb 25, 2014 (version 2 and below) will keep re
 
 ```json
 {
-  "token": "sharedsecret",
+  "nation_slug": "foobar",
   "payload": {
     "donation": {
       "donation_nationbuilder_id": 1,
@@ -307,7 +308,9 @@ Donation webhooks created before Feb 25, 2014 (version 2 and below) will keep re
         }
       }
     }
-  }
+  },
+  "token": "sharedsecret",
+  "version": 2
 }
 ```
 
