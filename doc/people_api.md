@@ -1085,7 +1085,7 @@ Should give you a response like this:
         "address1": "123 Fake St",
         "address2": null,
         "address3": null,
-        "city": "Beverly Hills,
+        "city": "Beverly Hills",
         "state": "CA",
         "country_code": "US",
         "zip": "90201",
