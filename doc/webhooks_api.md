@@ -76,7 +76,7 @@ Use this endpoint to register a webhook to fire on the occurance of a certain ev
 
 ### Attributes
 
-* `version` - the payload version you want to receive
+* `version` - the payload version you want to receive. Choose from 1, 2, 3 or 4.
 * `url` - the URL you want to have the webhook fire towards
 * `event` - the event you want to observe (listed at top of page)
 
