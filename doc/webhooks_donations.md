@@ -19,6 +19,7 @@ Donation webhook payloads are generated in response to certain one-time and recu
       "billing_address": {
           "address1": "123 Fake St",
           "address2": "Apt 1905",
+          "address3": "Suite 5A",
           "city": "Pasadena",
           "state": "CA",
           "country_code": "US",
@@ -47,6 +48,7 @@ Donation webhook payloads are generated in response to certain one-time and recu
         "primary_address": {
           "address1": "123 Fake St",
           "address2": "Apt 1905",
+          "address3": "Suite 5A",
           "city": "Pasadena",
           "state": "CA",
           "country_code": "US",
@@ -122,15 +124,15 @@ Donation webhook payloads are generated in response to certain one-time and recu
       "work_address": null
     }
   },
-  "token": "sharedsecret"
+  "token": "sharedsecret",
+  "version": 4
 }
 ```
 
 
-Past versions
-------------------------------------
+##Past versions (version 2 and below)
 
-Donation webhooks created before Feb 25, 2014 (version 2 and below) will keep receiving an earlier version of webhook payload. For the donation webhook to return the most recent version of the payload, the existing donation webhook has to be deleted first and the re-registered.
+Donation webhooks with version 2 and below will keep receiving an earlier version of the webhook payload. For the donation webhook to return a different version of the payload, the existing donation webhook has to be edited on the Control Panel.
 
 ### Donation Success/Update/Cancel
 
@@ -138,7 +140,7 @@ Donation webhooks created before Feb 25, 2014 (version 2 and below) will keep re
 
 ```json
 {
-  "token": "sharedsecret",
+  "nation_slug": "foobar",
   "payload": {
     "donation": {
       "donation_nationbuilder_id": 1,
@@ -305,7 +307,9 @@ Donation webhooks created before Feb 25, 2014 (version 2 and below) will keep re
         }
       }
     }
-  }
+  },
+  "token": "sharedsecret",
+  "version": 2
 }
 ```
 

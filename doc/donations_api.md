@@ -106,6 +106,7 @@ Visible only if the Voter addon is enabled:
 
 * `address1` - first address line
 * `address2` - second address line
+* `address3` - third address line
 * `city` - city
 * `state` - state
 * `zip` - zip code
@@ -153,6 +154,7 @@ GET https://foobar.nationbuilder.com/api/v1/donations?page=2&per_page=1
           "billing_address": {
               "address1": "614 Zemlak Rds",
               "address2": null,
+              "address3": null,
               "city": "West Kale",
               "state": "Massachusetts",
               "country_code": "US",
@@ -181,6 +183,7 @@ GET https://foobar.nationbuilder.com/api/v1/donations?page=2&per_page=1
               "primary_address": {
                   "address1": "614 Zemlak Rds",
                   "address2": null,
+                  "address3": null,
                   "city": "West Kale",
                   "state": "Massachusetts",
                   "country_code": "US",
@@ -460,6 +463,7 @@ You will receive a response of status 200 and body response like this:
           "primary_address": {
               "address1": "614 Zemlak Rds",
               "address2": null,
+              "address3": null,
               "city": "West Kale",
               "state": "Massachusetts",
               "country_code": "US",
