@@ -81,28 +81,28 @@ Resources
 * `home_address` - an address resource representing the home address
 * `id` - the NationBuilder ID of the person, specific to the authorized nation
 * `import_id` - the ID associated with this person when they were imported
-* `inferred_party` - this field is used to indicate the party the person is believed to be associated with based on modeling 
-* `inferred_support_level` - a support level based on modeling or other indirect means
-* `invoice_payments_amount_in_cents` - total invoice payment amount, in cents
-* `invoice_payments_referred_amount_in_cents` - the aggregate amount of invoice payments made by recruits of this person in cents
-* `invoices_amount_in_cents` - the aggregate amount of all of this person’s invoices in cents
+* `inferred_party` - the party the person is believed to be associated with
+* `inferred_support_level` - a possible support level
+* `invoice_payments_amount_in_cents` - total invoice payment amount (cents)
+* `invoice_payments_referred_amount_in_cents` - the aggregate amount of invoice payments made by recruits of this person (cents)
+* `invoices_amount_in_cents` - the aggregate amount of all of this person’s invoices (cents)
 * `invoices_count` - the number of invoices this person has
 * `is_deceased` - a boolean field that indicates if the person is alive or not
-* `is_donor` - boolean field that indicates if the person has donated
+* `is_donor` - a boolean field that indicates if the person has donated
 * `is_fundraiser` - a boolean value that indicates if this person has previously fundraised 
-* `is_ignore_donation_limits` - this person is not subject to donation limits associated with the nation
-* `is_leaderboardable` - a boolean that tells if this person is allowed to show up on the leaderboard or not 
+* `is_ignore_donation_limits` - a boolean that indicates whether this person is not subject to donation limits associated with the nation
+* `is_leaderboardable` - a boolean that tells if this person is allowed to show up on the leaderboard
 * `is_mobile_bad` - a boolean reflecting whether this person’s cell number is invalid
 * `is_possible_duplicate` - a boolean field that indicates if the NationBuilder matching algorithm thinks this person is a match to someone else in the nation
-* `is_profile_private` - a boolean that tells if this person’s profile is private or not 
+* `is_profile_private` - a boolean that tells if this person’s profile is private
 * `is_profile_searchable` - a boolean that tells if this person’s profile is allowed to show up in search results 
 * `is_prospect` - a boolean field that indicates if this person is a prospect
 * `is_supporter` - a boolean field that indicates if this person is a supporter
 * `is_survey_question_private` - a boolean field that indicates if this person’s survey responses are private
 * `is_twitter_follower` - whether the person is a Twitter follower of one of the nation’s broadcasters
 * `is_volunteer` - a boolean field that indicates whether the person has volunteered
-* `judicial_district` - district field
-* `labour_region` - district field
+* `judicial_district` - a district field
+* `labour_region` - a district field
 * `language` - this person’s primary language
 * `last_call_id` - the time and date of the last call to this person
 * `last_contacted_at` - the time and date of the last time this person was contacted  
@@ -167,22 +167,22 @@ Resources
 * `rnc_regid` - this person’s registration ID from the RNC
 * `rule_violations_count` - the number of times this person has violated one of the nation’s rules
 * `salesforce_id` - this person’s ID from Salesforce
-* `school_district` - district field
-* `school_sub_district` - district field
+* `school_district` - a district field
+* `school_sub_district` - a district field
 * `sex` - this person's gender (M, F or O)
 * `spent_capital_amount_in_cents` - the aggregate amount of capital ever spent by this person (in cents) 
 * `state_file_id` - this person’s ID from a state voter file
-* `state_lower_district` - district field
-* `state_upper_district` - district field
+* `state_lower_district` - a district field
+* `state_upper_district` - a district field
 * `submitted_address` - the address this person submitted
-* `subnations` - the array of subnations that this person belongs to 
+* `subnations` - an array of subnations that this person belongs to 
 * `suffix` - the suffix this person uses w/their name, i.e. Jr., Sr. or III
 * `support_level_changed_at` - the time and date that this person’s support level changed 
 * `support_level` - the level of support this person has for your nation, expressed as a number between 1 and 5, 1 being Strong support, 5 meaning strong opposition, and 3 meaning undecided.
-* `support_probability_score` - the likelihood that this person will support you at election time based on modeling
+* `support_probability_score` - the likelihood that this person will support you at election time
 * `supranational_district` - district field
 * `tags` - the tags assigned to this person, as an array of strings - setting via this API has been deprecated, use the [people tags API](http://nationbuilder.com/people_tags_api)
-* `turnout_probability_score` - the probability that this person will turn out to vote, based on modeling
+* `turnout_probability_score` - the probability that this person will turn out to vote
 * `twitter_address` - this person’s location based on their Twitter profile
 * `twitter_description` - the description that this person provided in their Twitter profile
 * `twitter_followers_count` - the number of followers this person has on Twitter 
@@ -198,7 +198,7 @@ Resources
 * `user_submitted_address` - an address resource representing the address this person submitted
 * `username` - this person’s NationBuilder username
 * `van_id` - this person’s ID from VAN
-* `village_district` - district field
+* `village_district` - a district field
 * `warnings_count` - the number of warnings this person has received
 * `website` - the URL of this person’s website
 * `work_address` - an address resource representing this person’s work address
