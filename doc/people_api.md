@@ -32,7 +32,6 @@ Resources
 * `county_district` - district field
 * `county_file_id` - this person’s ID from a county voter file
 * `created_at` - timestamp representing when this person was created in the nation
-* `custom_values` - this values in custom fields associated with this person
 * `demo` - Asian, Black, Hispanic, White, Other, Unknown
 * `do_not_call` - this is a boolean flag that lets us know if this person is on a do not call list
 * `do_not_contact` - this is a boolean flag that lets us know if this person is on a do not contact list
@@ -213,7 +212,6 @@ Resources
 * `county_district` - district field
 * `county_file_id` - this person’s ID from a county voter file
 * `created_at` - timestamp representing when this person was created in the nation
-* `custom_values` - this values in custom fields associated with this person
 * `dw_id` - this person’s ID from Catalist
 * `email_opt_in` - boolean representing whether this person has opted-in to email correspondence
 * `email` - the person's email address if reading or writing a single address
