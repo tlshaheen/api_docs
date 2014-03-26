@@ -582,25 +582,4 @@ If, for example, you donors are required to disclose an affiliation when they do
 }
 ```
 
-Your nation can also set these values similarly in the creation and update endpoints. Such custom fields, however, must be listed in the `custom_values` field:
-
-```json
-{
-    "donation": {
-        "id": 89,
-        "amount": "$10.00",
-        "first_name": "Sarah",
-        "last_name": "Kerrigan",
-        "email": "sarah@example.com",
-        "donor": {
-            ...
-        }
-
-        ...
-
-        "custom_values": {
-            "affiliation": "Confederate Ghost"
-        }
-    }
-}
-```
+Your nation can also set these values similarly in the creation and update endpoints.
