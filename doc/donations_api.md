@@ -123,7 +123,7 @@ Visible only if the Voter addon is enabled:
 Index Endpoint
 --------------
 
-The index endpoint provides a paginated view of the donations in a nation. 
+The index endpoint provides a paginated view of the donations in a nation.
 
 ```
 GET /api/v1/donations
@@ -140,7 +140,7 @@ GET https://foobar.nationbuilder.com/api/v1/donations?page=2&per_page=1
 ```
 
 ```json
-{ 
+{
   "page": 2,
   "total_pages": 3,
   "per_page": 1,
@@ -289,7 +289,7 @@ POST /api/v1/donations
 
 With attached body content like this:
 
-```json 
+```json
 {
   "donation": {
       "amount_in_cents": 1000,
@@ -509,7 +509,7 @@ You will receive a response of status 200 and body response like this:
           "precinct_id": null,
           "party": null,
           "rnc_id": null,
-          "rnc_regid": null                   
+          "rnc_regid": null
       },
       "election": null,
       "email": "sarah@example.com",
@@ -549,3 +549,37 @@ This endpoint removes a donation with the provided id.  It takes no parameters a
 ```
 DELETE /api/v1/donations/:id
 ```
+
+Custom Fields
+-------------
+[Custom fields](http://nationbuilder.com/custom_fields) can be set in the API, and will also be included in all donation resource responses.
+
+### Example
+If, for example, you donors are required to disclose an affiliation when they donate, you could register a custom field and it would be visible on the API resource:
+
+```json
+{
+    "page": 2,
+    "total_pages": 3,
+    "per_page": 1,
+    "total": 3,
+    "results": [
+        {
+            "id": 89,
+            "amount": "$10.00",
+            "first_name": "Sarah",
+            "last_name": "Kerrigan",
+            "email": "sarah@example.com",
+            "donor": {
+                ...
+            }
+
+            ...
+
+            "affiliation": "Undisputed ruler of the Swarm"
+        }
+    ]
+}
+```
+
+Your nation can also set these values similarly in the creation and update endpoints.
