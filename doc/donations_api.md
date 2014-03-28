@@ -583,3 +583,5 @@ If, for example, you donors are required to disclose an affiliation when they do
 ```
 
 Your nation can also set these values similarly in the creation and update endpoints.
+
+If you have suggestions for these docs, [they are public on Github and we accept pull requests](https://github.com/3dna/api_docs/blob/master/doc/donations_api.md).
