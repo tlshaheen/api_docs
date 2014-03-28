@@ -68,7 +68,7 @@ In contrast to the expected behavior, describe what currently happens when the b
 Charles is an HTTP monitor that enables a developer to view all of the HTTP
 traffic between their application and NationBuilder. This includes requests,
 responses and the HTTP headers. It works on Windows, MacOS, and Linux. It costs
-$50. Checkout Charles at http://www.charlesproxy.com/ 
+$50. Check out Charles at http://www.charlesproxy.com/
 
 We've also found Runscope very helpful, and it's got a free version: https://www.runscope.com/signup
 
