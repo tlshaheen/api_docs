@@ -14,7 +14,7 @@ Resources
 * `check_number` - check/wire/MO number
 * `corporate_contribution` - true if the donation is a corporate contribution
 * `created_at` - timestamp representing when the donation was created
-* `donor` - a donor resource representing the donor
+* `donor` - an [abbreviated person resource](http://nationbuilder.com/people_api) representing the donor
 * `email` - the donor's email address
 * `employer` - the name of the donor's employer
 * `failed_at` - timestamp representing when the donation failed
@@ -47,60 +47,6 @@ Visible only if the Voter addon is enabled:
 * `fec_type` - [FEC code name](http://nationbuilder.com/what_are_the_valid_fec_codes_for_import)
 * `fec_type_ngp_code` - [NGP FEC code](http://nationbuilder.com/what_are_the_valid_fec_codes_for_import)
 * `election` - an election resource representing an election
-
-### Donor Resource
-
-* `id` - id of the person who donated
-* `external_id` - string representing an external identifier for this person
-* `first_name` - the person's first name and middle name
-* `last_name` - the person's last name
-* `email` - the person's email address
-* `phone` - the person's home phone number
-* `mobile` - the person's cell phone number
-* `birthdate` - the person's birthdate
-* `sex` - the person's sex (M or F)
-* `tags` - the tags assigned to the person, as an array of strings
-* `note` - a note attached to the person's profile
-* `support_level` - level of support the person has for your nation, expressed as a number between 1 and 5, 1 being strong support, 5 meaning strong opposition, and 3 meaning undecided
-* `home_address` - an address resource representing the person's home address
-* `recruiter_id` - id of the person who recruited this person
-* `created_at` - timestamp representing when the person was created
-* `updated_at` - timestamp representing when the person was last updated
-* `mobile_opt_in` - true if the person opted-in to mobile correspondence
-* `email_opt_in` - true if the person opted-in to email correspondence
-* `is_volunteer` - true if the person volunteered
-* `is_twitter_follower` - true if the person is a twitter follower
-* `has_facebook` - true if the person record has facebook information attached
-* `state_file_id` - their id from a state voter file
-* `county_file_id` - their id from a county voter file
-* `nbec_guid` - their id from the NationBuilder Election Center
-* `van_id` - their id from VAN
-* `dw_id` - their id from Catalist
-* `ngp_id` - their id from NGP
-* `pf_strat_id` - their id from PoliticalForce
-* `twitter_name` - twitter handle
-* `twitter_id` - id from twitter
-* `salesforce_id` - their id from salesforce
-* `civicrm_id` - their id from CiviCRM
-* `linkedin_id` - their id from LinkedIn
-* `employer` - their employer's name
-* `occupation` - their occupation
-* `supranational_district` - district field
-* `federal_district` - district field
-* `labour_region` - district field
-* `state_upper_district` - district field
-* `state_lower_district` - district field
-* `city_district` - district field
-* `county_district` - district field
-* `judicial_district` - district field
-* `school_district` - district field
-* `school_sub_district` - district field
-* `village_district` - district field
-* `fire_district` - district field
-* `precinct_id` - id of the precinct attached to this person, as found in the precincts API
-* `party` - a one-letter code representing [provincial parties for nations](http://nationbuilder.com/support_for_international_parties)
-* `rnc_id` - their id from RNC
-* `rnc_regid` - their registration id from RNC
 
 ### Address Resource
 
@@ -297,6 +243,7 @@ With attached body content like this:
       "last_name": "Kerrigan",
       "payment_type_name": "Cash",
       "tracking_code_slug": "foo_bar"
+      "succeeded_at": "2013-02-21T10:04:15-04:00"
   }
 }
 ```
@@ -425,9 +372,7 @@ With request body like this:
 ```json
 {
   "donation": {
-      "donor": {
-          "occupation": "campaign manager"
-      }
+      "occupation": "campaign manager"
   }
 }
 ```
