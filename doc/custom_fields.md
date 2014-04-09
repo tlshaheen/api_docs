@@ -1,5 +1,5 @@
-Custom Fields
-=============
+Custom Fields on the API
+========================
 
 [Custom fields](http://nationbuilder.com/custom_fields) can be set on the Donations and People APIs, and will also be included in all person resource and donation resource responses.
 

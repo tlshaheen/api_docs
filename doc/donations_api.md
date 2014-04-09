@@ -499,7 +499,7 @@ Custom Fields
 -------------
 [Custom fields](http://nationbuilder.com/custom_fields) can be set in the API, and will also be included in all donation resource responses.
 
-See [Custom Fields](http://nationbuilder.com/custom_fields_api) for more details.
+See documentation for [custom fields on the API](http://nationbuilder.com/custom_fields_api) for more details.
 
 
 If you have suggestions for these docs, [they are public on Github and we accept pull requests](https://github.com/3dna/api_docs/blob/master/doc/donations_api.md).
