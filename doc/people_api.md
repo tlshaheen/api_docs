@@ -2651,25 +2651,7 @@ Custom Fields
 -------------
 [Custom fields](http://nationbuilder.com/custom_fields) can be set in the API, and will also be included in all person resource responses.
 
-### Example
-If, for example, your nation happened to care about the height of a person, you could register a custom field and it would be visible on the API resource:
+See [Custom Fields](http://nationbuilder.com/custom_fields_api) for more details.
 
-```json
-{
-  "person": {
-    "id": 43968,
-    "external_id": "781986",
-    "first_name": "Byron",
-    "last_name": "Anderson",
-    "email": "byron@example.com",
-
-    ...
-
-    "height": 72
-  }
-}
-```
-
-Your nation can also set these values similarly in the creation and update endpoints.
 
 If you have suggestions for these docs, [they are public on Github and we accept pull requests](https://github.com/3dna/api_docs/blob/master/doc/people_api.md).

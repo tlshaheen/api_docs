@@ -499,34 +499,7 @@ Custom Fields
 -------------
 [Custom fields](http://nationbuilder.com/custom_fields) can be set in the API, and will also be included in all donation resource responses.
 
-### Example
-If, for example, you donors are required to disclose an affiliation when they donate, you could register a custom field and it would be visible on the API resource:
+See [Custom Fields](http://nationbuilder.com/custom_fields_api) for more details.
 
-```json
-{
-    "page": 2,
-    "total_pages": 3,
-    "per_page": 1,
-    "total": 3,
-    "results": [
-        {
-            "id": 89,
-            "amount": "$10.00",
-            "first_name": "Sarah",
-            "last_name": "Kerrigan",
-            "email": "sarah@example.com",
-            "donor": {
-                ...
-            }
-
-            ...
-
-            "affiliation": "Undisputed ruler of the Swarm"
-        }
-    ]
-}
-```
-
-Your nation can also set these values similarly in the creation and update endpoints.
 
 If you have suggestions for these docs, [they are public on Github and we accept pull requests](https://github.com/3dna/api_docs/blob/master/doc/donations_api.md).
