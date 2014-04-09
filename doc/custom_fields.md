@@ -28,6 +28,7 @@ Assuming you have a person with id 672, make a request like this:
 
 ```
 GET /api/v1/people/672
+```
 
 You will receive a response of status 200, with response body like this:
 
