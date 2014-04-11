@@ -1932,7 +1932,7 @@ You will receive a response of status 201, with response body like this:
 Push Endpoint
 -------------
 
-This endpoint updates a person matched, or creates if no match is found.  Matches are found exclusively by email address.
+This endpoint updates a person matched, or creates if no match is found.  Matches are found exclusively by email address or external ID.
 
 ```
 PUT /api/v1/people/push
