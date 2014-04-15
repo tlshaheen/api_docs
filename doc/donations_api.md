@@ -14,6 +14,7 @@ Resources
 * `check_number` - check/wire/MO number
 * `corporate_contribution` - true if the donation is a corporate contribution
 * `created_at` - timestamp representing when the donation was created
+* `donor_id` - the id of the donor
 * `donor` - an [abbreviated person resource](http://nationbuilder.com/people_api) representing the donor
 * `email` - the donor's email address
 * `employer` - the name of the donor's employer
@@ -114,6 +115,7 @@ GET https://foobar.nationbuilder.com/api/v1/donations?page=2&per_page=1
           "created_at": "2014-02-14T14:36:29-05:00",
           "doing_business_with_nyc_agency": null,
           "doing_business_with_nyc_business_category": null,
+          "donor_id": 8472,
           "donor": {
               "id": 8472,
               "external_id": null,
@@ -225,9 +227,14 @@ POST /api/v1/donations
 
 * `donation` - the resource of the donation to be created
 
+Note: a `donation` is always attached to a `donor`. Use the Create or Match endpoints on the [People API](http://nationbuilder.com/people_api) to create or find the person who will act as the donor. When creating a donation, the `id` of that person should be specified in the `donor_id` field.
+If `donor_id` is defined the following fields are copied from the person to the donation so there is no need for you to specify them: `email`, `first_name`, `last_name`, `employer`, `occupation`, `doing_business_with_nyc_agency`, `doing_business_with_nyc_business_category`, `recruiter_id`.
+
 ### Example
 
-Make the request:
+Create or find a person to whom this donation should be attached. See the [People API](http://nationbuilder.com/people_api) documentation Create and Match endpoints for examples.
+
+Assuming you have a person with id 87, make the request:
 
 ```
 POST /api/v1/donations
@@ -239,10 +246,8 @@ With attached body content like this:
 {
   "donation": {
       "amount_in_cents": 1000,
-      "first_name": "Sarah",
-      "last_name": "Kerrigan",
       "payment_type_name": "Cash",
-      "tracking_code_slug": "foo_bar"
+      "donor_id": 87,
       "succeeded_at": "2013-02-21T10:04:15-04:00"
   }
 }
@@ -263,6 +268,7 @@ You will receive a response of status 200, with response body like this:
       "created_at": "2014-02-14T14:36:29-05:00",
       "doing_business_with_nyc_agency": null,
       "doing_business_with_nyc_business_category": null,
+      "donor_id": 87,
       "donor": {
           "id": 87,
           "external_id": null,
@@ -372,7 +378,7 @@ With request body like this:
 ```json
 {
   "donation": {
-      "occupation": "campaign manager"
+      "amount_in_cents": 2500,
   }
 }
 ```
@@ -383,8 +389,8 @@ You will receive a response of status 200 and body response like this:
 {
   "donation": {
       "actblue_order_number": null,
-      "amount": "$10.00",
-      "amount_in_cents": 1000,
+      "amount": "$25.00",
+      "amount_in_cents": 2500,
       "author_id": 67,
       "billing_address": null,
       "canceled_at": null,
@@ -393,6 +399,7 @@ You will receive a response of status 200 and body response like this:
       "created_at": "2014-02-14T14:36:29-05:00",
       "doing_business_with_nyc_agency": null,
       "doing_business_with_nyc_business_category": null,
+      "donor_id": 87,
       "donor": {
           "id": 87,
           "external_id": null,
