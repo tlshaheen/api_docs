@@ -5,7 +5,7 @@ require 'redcarpet'
 
 def preformatted_html
   file = ARGV.first
-  RedcarpetCompat.new(File.read(file), :fenced_code_blocks, :disable_indented_code_blocks).to_html
+  RedcarpetCompat.new(File.read(file), :fenced_code_blocks, :disable_indented_code_blocks, :tables).to_html
 end
 
 def doc
