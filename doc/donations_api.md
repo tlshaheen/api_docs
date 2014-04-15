@@ -227,8 +227,10 @@ POST /api/v1/donations
 
 * `donation` - the resource of the donation to be created
 
-Note: a `donation` is always attached to a `donor`. Use the Create or Match endpoints on the [People API](http://nationbuilder.com/people_api) to create or find the person who will act as the donor. When creating a donation, the `id` of that person should be specified in the `donor_id` field.
-If `donor_id` is defined the following fields are copied from the person to the donation so there is no need for you to specify them: `email`, `first_name`, `last_name`, `employer`, `occupation`, `doing_business_with_nyc_agency`, `doing_business_with_nyc_business_category`, `recruiter_id`.
+Note:
+* A `donation` is always attached to a `donor`. Use the Create or Match endpoints on the [People API](http://nationbuilder.com/people_api) to create or find the person who will act as the donor.
+* When creating a donation, the `id` of that person should be specified in the `donor_id` field.
+* If `donor_id` is defined the following fields are copied from the person to the donation so there is no need to specify them: `email`, `first_name`, `last_name`, `employer`, `occupation`, `doing_business_with_nyc_agency`, `doing_business_with_nyc_business_category`, `recruiter_id`.
 
 ### Example
 
@@ -478,7 +480,7 @@ You will receive a response of status 200 and body response like this:
       "merchant_account_id": null,
       "ngp_id": null,
       "note": null,
-      "occupation": "campaign manager",
+      "occupation": null,
       "page_slug": null,
       "payment_type_name": "Cash",
       "payment_type_ngp_code": "C",
