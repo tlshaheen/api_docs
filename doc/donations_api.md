@@ -228,9 +228,9 @@ POST /api/v1/donations
 * `donation` - the resource of the donation to be created
 
 ##### Note:
-* A `donation` is always attached to a `donor`. Use the Create or Match endpoints on the [People API](http://nationbuilder.com/people_api) to create or find the person who will act as the donor.
+* A donation is always attached to a donor. Use the Create or Match endpoints on the [People API](http://nationbuilder.com/people_api) to create or find the person who will act as the donor.
 * When creating a donation, the `id` of the donor should be specified in the `donor_id` field.
-* If `donor_id` is defined the following fields are copied from the donor to the donation so there is no need to specify them: `email`, `first_name`, `last_name`, `employer`, `occupation`, `doing_business_with_nyc_agency`, `doing_business_with_nyc_business_category`, `recruiter_id`.
+* If `donor_id` is specified the following fields are copied from the donor to the donation so there is no need to specify them: `email`, `first_name`, `last_name`, `employer`, `occupation`, `doing_business_with_nyc_agency`, `doing_business_with_nyc_business_category`, `recruiter_id`.
 
 ### Example
 
