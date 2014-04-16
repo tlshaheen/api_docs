@@ -14,7 +14,7 @@ Resources
 * `check_number` - check/wire/MO number
 * `corporate_contribution` - true if the donation is a corporate contribution
 * `created_at` - timestamp representing when the donation was created
-* `donor_id` - the id of the donor
+* `donor_id` - the person id of the donor
 * `donor` - an [abbreviated person resource](http://nationbuilder.com/people_api) representing the donor
 * `email` - the donor's email address
 * `employer` - the name of the donor's employer
