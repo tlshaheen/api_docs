@@ -43,8 +43,6 @@ Resources
 Visible only if the Voter addon is enabled:
 
 * `actblue_order_number` - ActBlue order number
-* `doing_business_with_nyc_agency` - true if affiliation is declared with an organization that does business with NYC government agencies
-* `doing_business_with_nyc_business_category` - category of the business the organization does with NYC government agencies
 * `fec_type` - [FEC code name](http://nationbuilder.com/what_are_the_valid_fec_codes_for_import)
 * `fec_type_ngp_code` - [NGP FEC code](http://nationbuilder.com/what_are_the_valid_fec_codes_for_import)
 * `election` - an election resource representing an election
@@ -113,8 +111,6 @@ GET https://foobar.nationbuilder.com/api/v1/donations?page=2&per_page=1
           "check_number": null,
           "corporate_contribution": false,
           "created_at": "2014-02-14T14:36:29-05:00",
-          "doing_business_with_nyc_agency": null,
-          "doing_business_with_nyc_business_category": null,
           "donor_id": 8472,
           "donor": {
               "id": 8472,
@@ -230,7 +226,7 @@ POST /api/v1/donations
 ##### Note:
 * A donation is always attached to a donor. Use the Create or Match endpoints on the [People API](http://nationbuilder.com/people_api) to create or find the person who will act as the donor.
 * When creating a donation, the `id` of the donor should be specified in the `donor_id` field.
-* If `donor_id` is specified the following fields are copied from the donor to the donation so there is no need to specify them: `email`, `first_name`, `last_name`, `employer`, `occupation`, `doing_business_with_nyc_agency`, `doing_business_with_nyc_business_category`, `recruiter_id`.
+* If `donor_id` is specified the following fields are copied from the donor to the donation so there is no need to specify them: `email`, `first_name`, `last_name`, `employer`, `occupation`, `recruiter_id`.
 
 ### Example
 
@@ -268,8 +264,6 @@ You will receive a response of status 200, with response body like this:
       "check_number": null,
       "corporate_contribution": null,
       "created_at": "2014-02-14T14:36:29-05:00",
-      "doing_business_with_nyc_agency": null,
-      "doing_business_with_nyc_business_category": null,
       "donor_id": 87,
       "donor": {
           "id": 87,
@@ -399,8 +393,6 @@ You will receive a response of status 200 and body response like this:
       "check_number": null,
       "corporate_contribution": null,
       "created_at": "2014-02-14T14:36:29-05:00",
-      "doing_business_with_nyc_agency": null,
-      "doing_business_with_nyc_business_category": null,
       "donor_id": 87,
       "donor": {
           "id": 87,
