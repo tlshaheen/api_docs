@@ -31,8 +31,6 @@ Donation webhook payloads are generated in response to certain one-time and recu
       "check_number": "7373474378349",
       "corporate_contribution": false,
       "created_at": "2014-02-11T10:21:43-05:00",
-      "doing_business_with_nyc_agency": null,
-      "doing_business_with_nyc_business_category": null,
       "donor_id": 75408,
       "donor": {
         "id": 75408,
