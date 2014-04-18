@@ -1,5 +1,3 @@
-
-
 Donations API
 ==========
 
@@ -14,24 +12,24 @@ Name                      | Description                                         
 `amount_in_cents`         | amount of donation in cents                                                                                                | N         | Y        | 1000
 `author_id`               | id of the person who created the donation                                                                                  | N         | N        | null
 `billing_address`         | an address resource representing the billing address                                                                       | N         | Y        | address [] (http://nationbuilder.com/)
-`canceled_at`             | timestamp representing when the donation was canceled                                                                      | N         | N        | null
-`check_number`            | check/wire/MO number                                                                                                       | Y         | N        | null
-`corporate_contribution`  | true if the donation is a corporate contribution                                                                           | N         | Y        | false
+`canceled_at`             | timestamp representing when the donation was canceled                                                                      | Y         | N        | null
+`check_number`            | check/wire/MO number                                                                                                       | N         | N        | null
+`corporate_contribution`  | true if the donation is a corporate contribution                                                                           | Y         | Y        | false
 `created_at`              | timestamp representing when the donation was created                                                                       | N         | Y        | 2014-02-14T14:36:29-05:00
 `donor_id`                | the person id of the donor                                                                                                 | N         | Y        | 8472
 `donor`                   | an [abbreviated person resource](http://nationbuilder.com/people_api) representing the donor                               | Y         | Y        | 100.00
 `email`                   | the donor's email address                                                                                                  | N         | Y        | queen@swarm.net
 `employer`                | the name of the donor's employer                                                                                           | N         | Y        | ABC Consulting Co
 `failed_at`               | timestamp representing when the donation failed                                                                            | N         | N        | null
-`first_name`              | the donor's first name and middle name                                                                                     | Y         | N        | Sarah
-`id`                      | id of the donation                                                                                                         | N         | Y        | 314
+`first_name`              | the donor's first name and middle name                                                                                     | N         | N        | Sarah
+`id`                      | id of the donation                                                                                                         | Y         | Y        | 314
 `import_id`               | id of the import job (if the donation was imported)                                                                        | N         | N        | null
 `is_private`              | false if the donation should not be posted publicly on the site                                                            | N         | Y        | false
 `last_name`               | the donor's last name                                                                                                      | N         | Y        | Kerrigan
 `mailing_slug`            | slug of the mailing page                                                                                                   | N         | Y        | null
 `merchant_account_id`     | id of the merchant account used for paying the donation                                                                    | N         | N        | null
-`ngp_id`                  | an id which is present if the donor has been imported from NGP VAN                                                         | N         | N        | null
-`note`                    | a note for this donation                                                                                                   | N         | N        | null
+`ngp_id`                  | an id which is present if the donor has been imported from NGP VAN                                                         | Y         | N        | null
+`note`                    | a note for this donation                                                                                                   | Y         | N        | null
 `occupation`              | the donor's occupation                                                                                                     | N         | Y        | Consultant
 `page_slug`               | slug of the donation page                                                                                                  | N         | N        | null
 `payment_type_name`       | name of the [payment type](http://nationbuilder.com/what_are_the_valid_payment_types_for_imports)                          | N         | Y        | Check
@@ -39,9 +37,9 @@ Name                      | Description                                         
 `pledge_id`               | the id of the pledge this donation fulfills.  Pledges are promises received from supporters to donate money in the future. | N         | N        | null
 `recruiter_name_or_email` | recruiter's name or email address                                                                                          | N         | Y        | Hayden Johns
 `recurring_donation_id`   | an id present if the donation is recurring                                                                                 | N         | N        | null
-`succeeded_at`            | timestamp representing when the donation succeeded                                                                         | N         | Y        | 2013-02-21T10:04:15-04:00
+`succeeded_at`            | timestamp representing when the donation succeeded                                                                         | Y         | Y        | 2013-02-21T10:04:15-04:00
 `tracking_code_slug`      | tracking code for this donation                                                                                            | N         | N        | null
-`updated_at`              | timestamp representing when the donation was last updated                                                                  | N         | Y        | 2014-02-14T14:36:29-05:00
+`updated_at`              | timestamp representing when the donation was last updated                                                                  | Y         | Y        | 2014-02-14T14:36:29-05:00
 `work_address`            | an address resource representing the work address                                                                          | N         | N        | null
 
 Visible only if the Voter addon is enabled:
