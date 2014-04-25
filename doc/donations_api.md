@@ -254,7 +254,13 @@ With attached body content like this:
       "amount_in_cents": 1000,
       "payment_type_name": "Cash",
       "donor_id": 87,
-      "succeeded_at": "2013-02-21T10:04:15-04:00"
+      "succeeded_at": "2013-02-21T10:04:15-04:00",
+      "fec_type": "Contribution",
+      "election": {
+          "cycle": "2014",
+          "period": "General",
+          "period_ngp_code": "G"
+      }
   }
 }
 ```
@@ -326,12 +332,16 @@ You will receive a response of status 200, with response body like this:
           "rnc_id": null,
           "rnc_regid": null
       },
-      "election": null,
+      "election": {
+          "cycle": "2014",
+          "period": "General",
+          "period_ngp_code": "G"
+      },
       "email": null,
       "employer": null,
       "failed_at": null,
-      "fec_type": null,
-      "fec_type_ngp_code": null,
+      "fec_type": "Contribution",
+      "fec_type_ngp_code": "C",
       "first_name": "Sarah",
       "id": 89,
       "import_id": null,
@@ -348,7 +358,7 @@ You will receive a response of status 200, with response body like this:
       "pledge_id": null,
       "recruiter_name_or_email": "Sarah Kerrigan",
       "recurring_donation_id": null,
-      "succeeded_at": null,
+      "succeeded_at": "2013-02-21T10:04:15-04:00",
       "tracking_code_slug": "foo_bar",
       "updated_at": "2014-02-14T14:36:29-05:00",
       "work_address": null
