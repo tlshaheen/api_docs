@@ -6,72 +6,83 @@ Resources
 
 ### Donation Resource
 
-Name                      | Description                                                                                                                | Writable  | Required | Example Value(s)
---------------------------|----------------------------------------------------------------------------------------------------------------------------|-----------|----------|-----------------
-`amount`                  | amount of donation in the nation's currency                                                                                | N         | N        | $10.00
-`amount_in_cents`         | amount of donation in cents                                                                                                | Y         | Y        | 1000
-`author_id`               | id of the person who created the donation                                                                                  | Y         | N        | 67
-`billing_address`         | an address resource representing the billing address                                                                       | Y         | Y        | 
-`canceled_at`             | timestamp representing when the donation was canceled                                                                      | Y         | N        | 2014-02-14T15:22:12-05:00
-`check_number`            | check/wire/MO number                                                                                                       | Y         | N        | 4747392947582
-`corporate_contribution`  | true if the donation is a corporate contribution                                                                           | Y         | Y        | false
-`created_at`              | timestamp representing when the donation was created                                                                       | N         | N        | 2014-02-14T14:36:29-05:00
-`donor_id`                | the person id of the donor                                                                                                 | Y         | Y        | 8472
-`donor`                   | an [abbreviated person resource](http://nationbuilder.com/people_api) representing the donor                               | N         | N        | 
-`email`                   | the donor's email address                                                                                                  | Y         | Y        | queen@swarm.net
-`employer`                | the name of the donor's employer                                                                                           | Y         | Y        | ABC Consulting Co
-`failed_at`               | timestamp representing when the donation failed                                                                            | Y         | N        | 2014-02-14T15:22:12-05:00
-`first_name`              | the donor's first name and middle name                                                                                     | Y         | N        | Sarah
-`id`                      | id of the donation                                                                                                         | N         | N        | 314
-`import_id`               | id of the import job (if the donation was imported)                                                                        | N         | N        | 890
-`is_private`              | false if the donation should not be posted publicly on the site                                                            | Y         | Y        | false
-`last_name`               | the donor's last name                                                                                                      | Y         | Y        | Kerrigan
-`mailing_slug`            | slug of the mailing page                                                                                                   | N         | N        | la_family
-`merchant_account_id`     | id of the merchant account used for paying the donation                                                                    | Y         | N        | 11
-`ngp_id`                  | an id which is present if the donor has been imported from NGP VAN                                                         | Y         | N        | 56
-`note`                    | a note for this donation                                                                                                   | Y         | N        | very generous
-`occupation`              | the donor's occupation                                                                                                     | Y         | Y        | Consultant
-`page_slug`               | slug of the donation page                                                                                                  | N         | N        | ticket_sales
-`payment_type_name`       | name of the [payment type](http://nationbuilder.com/what_are_the_valid_payment_types_for_imports)                          | Y         | Y        | Check
-`payment_type_ngp_code`   | code of the [payment type](http://nationbuilder.com/what_are_the_valid_payment_types_for_imports)                          | Y         | N        | K
-`pledge_id`               | the id of the pledge this donation fulfills.  Pledges are promises received from supporters to donate money in the future. | N         | N        | 129
-`recruiter_name_or_email` | recruiter's name or email address                                                                                          | Y         | Y        | Hayden Johns
-`recurring_donation_id`   | an id present if the donation is recurring                                                                                 | N         | N        | 89
-`succeeded_at`            | timestamp representing when the donation succeeded                                                                         | Y         | Y        | 2013-02-21T10:04:15-05:00
-`tracking_code_slug`      | tracking code for this donation                                                                                            | Y         | N        | vip
-`updated_at`              | timestamp representing when the donation was last updated                                                                  | N         | N        | 2014-02-14T14:36:29-05:00
-`work_address`            | an address resource representing the work address                                                                          | Y         | N        | 
+Name                      | Description                                                                                                                | Writable  | Required       | Example Value(s)
+--------------------------|----------------------------------------------------------------------------------------------------------------------------|-----------|----------------|-----------------
+`amount`                  | amount of donation in the nation's currency                                                                                | N         | N              | $10.00
+`amount_in_cents`         | amount of donation in cents                                                                                                | Y         | Y              | 1000
+`author_id`               | id of the person who created the donation                                                                                  | N         | N<sup>1</sup>  | 67
+`billing_address`         | an address resource representing the billing address                                                                       | Y         | N              | (see Address Resource)
+`canceled_at`             | timestamp representing when the donation was canceled                                                                      | Y         | N              | 2014-02-14T15:22:12-05:00
+`check_number`            | check/wire/MO number                                                                                                       | Y         | N              | 4747392947582
+`corporate_contribution`  | true if the donation is a corporate contribution                                                                           | Y         | N              | false
+`created_at`              | timestamp representing when the donation was created                                                                       | N         | N              | 2014-02-14T14:36:29-05:00
+`donor_id`                | the person id of the donor                                                                                                 | Y         | N<sup>2</sup>  | 8472
+`donor`                   | an [abbreviated person resource](http://nationbuilder.com/people_api) representing the donor                               | N         | N              | (see Abbreviated Person Resource)
+`email`                   | the donor's email address                                                                                                  | Y         | N<sup>3</sup>  | queen@swarm.net
+`employer`                | the name of the donor's employer                                                                                           | Y         | N<sup>3</sup>  | ABC Consulting Co
+`failed_at`               | timestamp representing when the donation failed                                                                            | Y         | N              | 2014-02-14T15:22:12-05:00
+`first_name`              | the donor's first name and middle name                                                                                     | Y         | N<sup>3</sup>  | Sarah
+`id`                      | id of the donation                                                                                                         | N         | N              | 314
+`import_id`               | id of the import job (if the donation was imported)                                                                        | N         | N              | 890
+`is_private`              | false if the donation should not be posted publicly on the site                                                            | Y         | N              | false
+`last_name`               | the donor's last name                                                                                                      | Y         | N<sup>3</sup>  | Kerrigan
+`mailing_slug`            | slug of the mailing page                                                                                                   | N         | N              | la_family
+`merchant_account_id`     | id of the merchant account used for paying the donation                                                                    | Y         | N              | 11
+`ngp_id`                  | an id which is present if the donor has been imported from NGP VAN                                                         | Y         | N              | 56
+`note`                    | a note for this donation                                                                                                   | Y         | N              | very generous
+`occupation`              | the donor's occupation                                                                                                     | Y         | N<sup>3</sup>  | Consultant
+`page_slug`               | slug of the donation page                                                                                                  | N         | N              | ticket_sales
+`payment_type_name`       | name of the [payment type](http://nationbuilder.com/what_are_the_valid_payment_types_for_imports)                          | Y         | Y<sup>4</sup>  | Check
+`payment_type_ngp_code`   | code of the [payment type](http://nationbuilder.com/what_are_the_valid_payment_types_for_imports)                          | Y         | Y<sup>4</sup>  | K
+`pledge_id`               | the id of the pledge this donation fulfills.  Pledges are promises received from supporters to donate money in the future. | N         | N              | 129
+`recruiter_name_or_email` | recruiter's name or email address                                                                                          | Y         | N<sup>3</sup>  | Hayden Johns
+`recurring_donation_id`   | an id present if the donation is recurring                                                                                 | N         | N              | 89
+`succeeded_at`            | timestamp representing when the donation succeeded                                                                         | Y         | N<sup>5</sup>  | 2013-02-21T10:04:15-05:00
+`tracking_code_slug`      | tracking code for this donation                                                                                            | Y         | N              | vip
+`updated_at`              | timestamp representing when the donation was last updated                                                                  | N         | N              | 2014-02-14T14:36:29-05:00
+`work_address`            | an address resource representing the work address                                                                          | Y         | N              | (see Address Resource)
+\[1\]: on the Create endpoint this field be set to the id of the API access token's owner.
+\[2\]: it is strongly recommended to specify this field. If omitted, `email` or `first_name` and `last_name` becomes required and a new Person may be created.
+\[3\]: use the `donor_id` field instead to specify a donor. By specifying any of these fields you override the value of the same field on the donor.
+\[4\]: default: Cash (C). It is strongly recommended to specify one of these fields.
+\[5\]: if omitted the donation will be considered failed.
 
-Visible only if the Voter addon is enabled:
+These fields are always visible but contain null values unless the Voter addon is enabled:
 
-Name                      | Description                                                                        | Writable  | Required | Example Value(s)
---------------------------|------------------------------------------------------------------------------------|-----------|----------|-----------------
-`actblue_order_number`    | ActBlue order number                                                               | Y         | Y        | 543
-`fec_type`                | [FEC code name](http://nationbuilder.com/what_are_the_valid_fec_codes_for_import)  | Y         | Y        | Contribution
-`fec_type_ngp_code`       | [NGP FEC code](http://nationbuilder.com/what_are_the_valid_fec_codes_for_import)   | Y         | Y        | C
-`election`                | an election resource representing an election                                      | Y         | Y        |
+Name                      | Description                                                                        | Writable  | Required        | Example Value(s)
+--------------------------|------------------------------------------------------------------------------------|-----------|-----------------|-----------------
+`actblue_order_number`    | ActBlue order number                                                               | Y         | N               | 543
+`fec_type`                | [FEC code name](http://nationbuilder.com/what_are_the_valid_fec_codes_for_import)  | Y         | N<sup>1</sup>   | Contribution
+`fec_type_ngp_code`       | [NGP FEC code](http://nationbuilder.com/what_are_the_valid_fec_codes_for_import)   | Y         | N<sup>1</sup>   | C
+`election`                | an election resource representing an election                                      | Y         | N<sup>2</sup>   | (see Election Resource)
+\[1\]: default: Contribution (C). It is strongly recommended to specify one of these fields.
+\[2\]: It is strongly recommended to specify this field.
 
 ### Address Resource
 
-Name                      | Description               | Writable  | Required | Example Value(s)
---------------------------|---------------------------|-----------|----------|-----------------
-`address1`                | first address line        | Y         | Y        | 1600 Pennsylvania Ave
-`address2`                | second address line       | Y         | N        | Suite 200
-`address3`                | third address line        | Y         | N        | Apt. 207
-`city`                    | city                      | Y         | Y        | Los Angeles
-`state`                   | state                     | Y         | Y        | CA
-`zip`                     | zip code                  | Y         | Y        | 90013
-`country_code`            | country code              | Y         | Y        | US
-`lat`                     | latitude (using WGS-84)   | Y         | N        | 34.0204989
-`lng`                     | longitude (using WGS-84)  | Y         | N        | -118.4117325
+Name                      | Description               | Writable  | Required        | Example Value(s)
+--------------------------|---------------------------|-----------|-----------------|-----------------
+`address1`                | first address line        | Y         | N<sup>1</sup>   | 1600 Pennsylvania Ave
+`address2`                | second address line       | Y         | N               | Suite 200
+`address3`                | third address line        | Y         | N               | Apt. 207
+`city`                    | city                      | Y         | N<sup>1</sup>   | Los Angeles
+`state`                   | state                     | Y         | N<sup>1</sup>   | CA
+`zip`                     | zip code                  | Y         | N<sup>1</sup>   | 90013
+`country_code`            | country code              | Y         | N<sup>1</sup>   | US
+`lat`                     | latitude (using WGS-84)   | Y         | N               | 34.0204989
+`lng`                     | longitude (using WGS-84)  | Y         | N               | -118.4117325
+\[1\]: It is recommended to specify these fields.
 
 ### Election Resource
 
-Name                      | Description                                                                                           | Writable  | Required | Example Value(s)
---------------------------|-------------------------------------------------------------------------------------------------------|-----------|----------|-----------------
-`cycle`                   | election cycle                                                                                        | Y         | Y        | 2012
-`period`                  | election period                                                                                       | Y         | Y        | General
-`period_ngp_code`         | [election period code](http://nationbuilder.com/what_are_the_valid_election_period_codes_for_imports) | Y         | Y        | G
+Name                      | Description                                                                                           | Writable  | Required           | Example Value(s)
+--------------------------|-------------------------------------------------------------------------------------------------------|-----------|--------------------|-----------------
+`cycle`                   | election cycle                                                                                        | Y         | N<sup>1,2</sup>    | 2012
+`period`                  | election period                                                                                       | Y         | N<sup>1,3</sup>    | General
+`period_ngp_code`         | [election period code](http://nationbuilder.com/what_are_the_valid_election_period_codes_for_imports) | Y         | N<sup>1,3</sup>    | G
+\[1\]: It is strongly recommended to specify `cycle` and one of `period` or `period_ngp_code`.
+\[2\]: default: the current election which is displayed on the Control Panel in the Political/Settings section.
+\[3\]: default: Special (S) if `cycle` is defined, otherwise the value of the current election period which is displayed on the Control Panel in the Political/Settings section.
 
 Index Endpoint
 --------------
