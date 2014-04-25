@@ -80,7 +80,7 @@ Name                      | Description                                         
 `cycle`                   | election cycle                                                                                        | Y         | N<sup>1,2</sup>    | 2012
 `period`                  | election period                                                                                       | Y         | N<sup>1,3</sup>    | General
 `period_ngp_code`         | [election period code](http://nationbuilder.com/what_are_the_valid_election_period_codes_for_imports) | Y         | N<sup>1,3</sup>    | G
-\[1\]: It is strongly recommended to specify `cycle` and one of `period` or `period_ngp_code`.<br/>
+\[1\]: It is strongly recommended to specify `cycle` and either `period` or `period_ngp_code`.<br/>
 \[2\]: default: the current election which is displayed on the Control Panel in the Political/Settings section.<br/>
 \[3\]: default: Special (S) if `cycle` is defined, otherwise the value of the current election period which is displayed on the Control Panel in the Political/Settings section.
 
