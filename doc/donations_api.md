@@ -41,13 +41,13 @@ Name                      | Description                                         
 `tracking_code_slug`      | tracking code for this donation                                                                                            | Y         | N              | vip
 `updated_at`              | timestamp representing when the donation was last updated                                                                  | N         | N              | 2014-02-14T14:36:29-05:00
 `work_address`            | an address resource representing the work address                                                                          | Y         | N              | (see Address Resource)
-\[1\]: on the Create endpoint this field be set to the id of the API access token's owner.
-\[2\]: it is strongly recommended to specify this field. If omitted, `email` or `first_name` and `last_name` becomes required and a new Person may be created.
-\[3\]: use the `donor_id` field instead to specify a donor. By specifying any of these fields you override the value of the same field on the donor.
-\[4\]: default: Cash (C). It is strongly recommended to specify one of these fields.
+\[1\]: on the Create endpoint this field be set to the id of the API access token's owner.<br/>
+\[2\]: it is strongly recommended to specify this field. If omitted, `email` or `first_name` and `last_name` becomes required and a new Person may be created.<br/>
+\[3\]: use the `donor_id` field instead to specify a donor. By specifying any of these fields you override the value of the same field on the donor.<br/>
+\[4\]: default: Cash (C). It is strongly recommended to specify one of these fields.<br/>
 \[5\]: if omitted the donation will be considered failed.
 
-These fields are always visible but contain null values unless the Voter addon is enabled:
+### These fields are always visible but contain null values unless the Voter addon is enabled:
 
 Name                      | Description                                                                        | Writable  | Required        | Example Value(s)
 --------------------------|------------------------------------------------------------------------------------|-----------|-----------------|-----------------
@@ -55,7 +55,7 @@ Name                      | Description                                         
 `fec_type`                | [FEC code name](http://nationbuilder.com/what_are_the_valid_fec_codes_for_import)  | Y         | N<sup>1</sup>   | Contribution
 `fec_type_ngp_code`       | [NGP FEC code](http://nationbuilder.com/what_are_the_valid_fec_codes_for_import)   | Y         | N<sup>1</sup>   | C
 `election`                | an election resource representing an election                                      | Y         | N<sup>2</sup>   | (see Election Resource)
-\[1\]: default: Contribution (C). It is strongly recommended to specify one of these fields.
+\[1\]: default: Contribution (C). It is strongly recommended to specify one of these fields.<br/>
 \[2\]: It is strongly recommended to specify this field.
 
 ### Address Resource
@@ -80,8 +80,8 @@ Name                      | Description                                         
 `cycle`                   | election cycle                                                                                        | Y         | N<sup>1,2</sup>    | 2012
 `period`                  | election period                                                                                       | Y         | N<sup>1,3</sup>    | General
 `period_ngp_code`         | [election period code](http://nationbuilder.com/what_are_the_valid_election_period_codes_for_imports) | Y         | N<sup>1,3</sup>    | G
-\[1\]: It is strongly recommended to specify `cycle` and one of `period` or `period_ngp_code`.
-\[2\]: default: the current election which is displayed on the Control Panel in the Political/Settings section.
+\[1\]: It is strongly recommended to specify `cycle` and one of `period` or `period_ngp_code`.<br/>
+\[2\]: default: the current election which is displayed on the Control Panel in the Political/Settings section.<br/>
 \[3\]: default: Special (S) if `cycle` is defined, otherwise the value of the current election period which is displayed on the Control Panel in the Political/Settings section.
 
 Index Endpoint
