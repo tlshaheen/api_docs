@@ -1032,7 +1032,7 @@ GET /api/v1/people/search
 Make the request:
 
 ```
-GET https://foobar.nationbuilder.com/api/v1/people/match?first_name=Byron&city=Beverly%20Hills&state=CA
+GET https://foobar.nationbuilder.com/api/v1/people/search?first_name=Byron&city=Beverly%20Hills&state=CA
 ```
 
 Should give you a response like this:
