@@ -55,7 +55,7 @@ Resources
 * `email4_is_bad` - boolean indicating if email4 for this person is bad
 * `email4` - an email address for this person
 * `email_opt_in` - boolean representing whether this person has opted-in to email correspondence
-* `email` - the person's email address if reading or writing a single address
+* `email` - when reading this field clients can expect the person's best email address to be returned. A person can have up to 4 email addresses: `email1`, `email2`, `email3` and `email4`. The best email address is the one that is not marked as bad and is also marked as primary, that is, it is referenced by the `primary_email_id` field. When writing this field, its value will be assigned to one of `email1`, `email2`, `email3` and `email4` and it will be marked as primary. If all 4 email fields are already populated then the first one marked as bad will be overwritten. If none of the 4 email fields are marked as bad then the value of `email` will be dropped. In this case one of the 4 email fields and the `primary_email_id` have to be directly updated.
 * `employer` - the name of the company for which this person works
 * `ethnicity` - the ethnicity of this person as free text
 * `external_id` - a string representing an external identifier for this person
@@ -149,7 +149,7 @@ Resources
 * `prefix` - the name prefix of this person, i.e. Mr., Mrs.
 * `previous_party` - the party this person had selected before their current party selection
 * `primary_address` - an address resource representing the primary address
-* `primary_email_id` - the resource ID of the primary email address associated with this person
+* `primary_email_id` - the id of the primary email address associated with this person, one of: 1, 2, 3 or 4. This id corresponds to the 4 email addresses a person can have: `email1`, `email2`, `email3` and `email4`.
 * `priority_level_changed_at` - the date and time that this person’s priority level changed
 * `priority_level` - the priority level associated with this person
 * `profile_content_html` - the profile content for this person’s public profile in HTML
