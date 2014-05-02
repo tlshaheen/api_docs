@@ -12,7 +12,7 @@ Name                | Slug              | Field type
 Your height         | height            | Number
 Your favorite movie | favorite_movie    | Text
 Are you a student?  | is_student        | Checkbox
-Best time to call   | best_time_to_call | Multiple choice, with options: Anytime, Evenings only
+Best time to call   | best\_time\_to_call | Multiple choice, with options: Anytime, Evenings only
 
 Having these fields defined for your nation they will be listed for each person, with their default value being `null`. Use the create and update endpoints to set a value for these fields.
 
