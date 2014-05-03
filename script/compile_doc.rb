@@ -17,5 +17,12 @@ doc.css("h1").remove
 doc.css("table").each do |table|
   table["class"] = "table-docs"
   table["border"] = "0"
+
+  # Move the header row down to the body
+  header_row = table.css("thead").css("tr")
+  header_row.css("th").each { |th| th.name = "td" }
+  table.css("tbody").css("tr").first.add_previous_sibling(header_row)
+  table.css("thead").remove
 end
+
 puts doc.to_html
