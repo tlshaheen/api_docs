@@ -13,7 +13,7 @@ def doc
 end
 
 doc.css("pre").wrap("<div class='help-callout'></div>")
-doc.css("h1").remove
+doc.css("h1").first.remove
 doc.css("table").each do |table|
   table["class"] = "table-docs"
   table["border"] = "0"
