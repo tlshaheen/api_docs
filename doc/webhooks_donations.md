@@ -68,6 +68,8 @@ Donation webhook payloads are generated in response to certain one-time and recu
         "nbec_guid": "bba7230e-0104-11e2-bb92-373670e030f7",
         "van_id": null,
         "dw_id": null,
+        "do_not_call": false,
+        "do_not_contact": false,
         "ngp_id": null,
         "pf_strat_id": 91576765,
         "county_file_id": "97076395",
