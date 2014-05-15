@@ -72,6 +72,10 @@ $50. Check out Charles at http://www.charlesproxy.com/
 
 We've also found Runscope very helpful, and it's got a free version: https://www.runscope.com/signup
 
+We also provide our own API debugging tool, the API Explorer. You can access it at http://apiexplorer.nationbuilder.com
+
+The API Explorer uses app test tokens, so you don't have to get into OAuth2 right away. You can learn more about app test tokens and how to get one at http://nationbuilder.com/test_tokens
+
 There are other alternatives. Just google "web debugging proxy" to get started.
 
 ## If you can't isolate your bug...
