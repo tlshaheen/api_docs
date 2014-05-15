@@ -81,7 +81,7 @@ There are other alternatives. Just google "web debugging proxy" to get started.
 ## If you can't isolate your bug...
 
 Still, send in your bug report. Try to trim down your source code as much as
-possible to replicate the bug. In the exteme case, the API team has even
+possible to replicate the bug. In the extreme case, the API team has even
 done screen sharing to help diagnosis a bug.
 
 Send bug reports to api@nationbuilder.com.
