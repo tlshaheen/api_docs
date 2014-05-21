@@ -31,7 +31,7 @@ Then you should get a 200 response with a body like this:
     {
       "slug": "about",
       "status": "published",
-      "site_slug": "foobar",
+      "site_slug": "foobar-site",
       "name": "About",
       "headline": "About Foobar Softwares",
       "title": "About Foobar Softwares",
@@ -45,7 +45,7 @@ Then you should get a 200 response with a body like this:
     {
       "slug": "bla",
       "status": "published",
-      "site_slug": "foobar",
+      "site_slug": "foobar-site",
       "name": "bla",
       "headline": "bla",
       "title": "bla - Foobar Softwares",
@@ -102,7 +102,7 @@ You should get a 200 response with a body like this:
   "basic_page": {
     "slug": "my_page",
     "status": "published",
-    "site_slug": "foobar",
+    "site_slug": "foobar-site",
     "name": "My Page",
     "headline": "My Page",
     "title": "My Page - Foobar Softwares",
@@ -152,7 +152,7 @@ That should update the page to have the new title, and return a response code of
   "basic_page": {
     "slug": "my_page",
     "status": "published",
-    "site_slug": "foobar",
+    "site_slug": "foobar-site",
     "name": "My Page",
     "headline": "My Page",
     "title": "New Title",
