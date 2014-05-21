@@ -16,7 +16,7 @@ GET /api/v1/sites/:site_slug/pages/basic_pages
 If you make a request like this:
 
 ```
-GET https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/basic_pages
+GET https://foobar.nationbuilder.com/api/v1/sites/foobar-site/pages/basic_pages
 ```
 
 Then you should get a 200 response with a body like this:
@@ -81,7 +81,7 @@ POST /api/v1/sites/:site_slug/pages/basic_pages
 
 If you make a request like this:
 ```
-POST https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/basic_pages
+POST https://foobar.nationbuilder.com/api/v1/sites/foobar-site/pages/basic_pages
 ```
 
 With a body like this:
@@ -126,7 +126,7 @@ PUT /api/v1/sites/:site_slug/pages/basic_pages/:id
 Suppose you wanted to change the title of the page made in the documentation for the Create endpoint to be "New Title".  To do this, you would issue a request like this:
 
 ```
-PUT http://foobar.nationbuilder.com/api/v1/sites/foobar/pages/basic_pages/12
+PUT http://foobar.nationbuilder.com/api/v1/sites/foobar-site/pages/basic_pages/12
 ```
 
 With a body like this:
@@ -175,7 +175,7 @@ DELETE /api/v1/sites/:site_slug/pages/basic_pages/:id
 Issuing a request like this:
 
 ```
-DELETE http://foobar.nationbuilder.com/api/v1/sites/foobar/pages/basic_pages/12
+DELETE http://foobar.nationbuilder.com/api/v1/sites/foobar-site/pages/basic_pages/12
 ```
 
 Should remove the page from NationBuilder and respond with HTTP status code 204.
