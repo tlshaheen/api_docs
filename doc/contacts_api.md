@@ -13,7 +13,7 @@ Name           | Description                                                    
 type_id        | id of the contact type. For possible values use the Contact Types API.                          |  Y       | Y        | 5                            |
 method         | the method through which the contact was made. For possible values use the Contact Methods API. |  Y       | Y        | door_knock                   |
 sender_id      | id of the person who made the contact.                                                          |  Y       | Y        | 63                           |
-recipient_id   | id of the person who receives the contact.                                                      |  Y       | Y        | 342                          |
+recipient_id   | id of the person who receives the contact.                                                      |  N       | N        | 342                          |
 status         | status of the contact. For possible values use the Contact Statuses API.                        |  Y       | N        | not_interested               |
 broadcaster_id | id of the broadcaster on whose behalf the sender made the contact                               |  Y       | N        | 8123                         |
 note           | note about the content of the contact                                                           |  Y       | N        | He did not support the cause |
