@@ -126,7 +126,7 @@ Creates an empty list with the given attributes.
 
 * `list` - the attributes of the list you want to create
   * `name` - the name of the list
-  * `slug` - machine readable name of the list
+  * `slug` - a unique identifier for the list
   * `author_id` - the author of the list
   * `sort_order` - the order in which the list is sorted for retrieval
     * Options: `oldest_first`, `newest_first`, `priority_level`, `street_address`, `last_name`
