@@ -1,24 +1,32 @@
 Lists API
 =========
 
-Use the list API to manage lists and paginate through listed people.
+The lists API gives you fine-grained control over the lists in your nation.
+This API can be used to create and modify lists, and it can also be used
+to perform batch operations over the people that it contains.
 
 Index Endpoint
 --------------
 
-The index endpoint shows a paginated list of custom lists
-`GET /api/v1/lists`
+The index endpoint shows a paginated list of custom lists.
+
+```
+GET /api/v1/lists
+```
 
 ### Parameters
-* page - page number
-* per_page - number of results to show in one page of results (default 10, max 100)
+* `page` - page number
+* `per_page` - number of results to show in one page of results (default 10, max 100)
 
 ### Example
 
 This request:
-`GET https://foobar.nationbuilder.com/api/v1/lists`
 
-Should get you a 200 response with results like this:
+```
+GET https://foobar.nationbuilder.com/api/v1/lists
+```
+
+Should result in this response:
 
 ```json
 {
@@ -58,19 +66,25 @@ Should get you a 200 response with results like this:
 People Endpoint
 ---------------
 
-The people endpoint shows the people in a list
-`GET /api/v1/lists/:id/people`
+The people endpoint shows the people in a list.
+
+```
+GET /api/v1/lists/:id/people
+```
 
 ### Parameters
-* page - page number
-* per_page - number of results to show in one page of results (default 10, max 100)
+* `page` - page number
+* `per_page` - number of results to show in one page of results (default 10, max 100)
 
 ### Example
 
 This request:
-`GET https://foobar.nationbuilder.com/api/v1/lists/11/people`
 
-Should get you a 200 response and results like this:
+```
+GET https://foobar.nationbuilder.com/api/v1/lists/11/people
+```
+
+Should result in this response:
 
 ```json
 {
@@ -83,45 +97,49 @@ Should get you a 200 response and results like this:
       "id": 9148,
       "first_name": "Jesse",
       "last_name": "Ventura",
-      "email": "jv@mn.gov"
+      "email": "jv@mn.gov",
+      ...
     },
     {
       "id": 15232,
       "first_name": "Garrison",
       "last_name": "Keillor",
-      "email": "gk@mpr.org"
+      "email": "gk@mpr.org",
+      ...
     }
   ]
 }
 ```
 
-Note: The above is an example of a list of people. In here, there are four attributes
-for a person: id, first_name, last_name, and email. There are 50+ possible attributes for a
-person. The full list of person attributes is documented here: http://nationbuilder.com/people_api
+Note: The above only highlights a subset of the fields available for a person.
+For more information about which fields are included, visit the documentation
+for the people API [here](http://nationbuilder.com/people_api).
 
 Create Endpoint
 ---------------
 
-Creates an empty list with the given attributes
-`POST /api/v1/lists`
+Creates an empty list with the given attributes.
+
+```POST /api/v1/lists```
 
 ### Parameters
 
-* list - the attributes of the list you want to create
-    * name - name the list
-    * slug - machine readable name of the list
-    * slug - machine readable name of the list
-    * author_id - The author of the list
-    * sort_order - The order in which the list is sorted for retrieval
-        Options: oldest_first, newest_first, priority_level, street_address, last_name
+* `list` - the attributes of the list you want to create
+  * `name` - the name of the list
+  * `slug` - a unique identifier for the list
+  * `author_id` - the author of the list
+  * `sort_order` - the order in which the list is sorted for retrieval
+    * Options: `oldest_first`, `newest_first`, `priority_level`, `street_address`, `last_name`
 
 ### Example
 
-Issuing a request like this:
+Issuing this request:
 
-`POST https://foobar.nationbuilder.com/api/v1/lists`
+```
+POST https://foobar.nationbuilder.com/api/v1/lists
+```
 
-With a post body like this:
+With this post body:
 
 ```json
 {
@@ -134,7 +152,7 @@ With a post body like this:
 }
 ```
 
-Should make an empty list, return status code 200, and have a response body like this:
+Should result in this response:
 
 ```json
 {
@@ -152,27 +170,35 @@ Should make an empty list, return status code 200, and have a response body like
 Update Endpoint
 ---------------
 
-Updates the list to have the given attributes
-`PUT /api/v1/lists/:id`
+Updates a list to have the given attributes.
+
+```
+PUT /api/v1/lists/:id
+```
 
 Destroy Endpoint
 ----------------
 
-Removes the indicated list from NationBuilder
-`DELETE /api/v1/lists/:id`
+Destroys the indicated list.
+
+```
+DELETE /api/v1/lists/:id
+```
 
 Listing Creation Endpoint
 -------------------------
-Use this endpoint to add a person to a list.
+Adds a person to a list.
 
+```
 POST /api/v1/lists/:list_id/listings
+```
 
 ### Parameters
-* person_id: id of the person to add to the list
+* `person_id`: id of the person to add to the list
 
 ### Example
 
-Issuing a request like this:
+Issuing this request:
 
 ```
 POST https://foobar.nationbuilder.com/api/v1/lists/1/listings
@@ -186,7 +212,7 @@ POST https://foobar.nationbuilder.com/api/v1/lists/1/listings
 }
 ```
 
-The the listing should be created, you will receive a 200 response code and a response like this:
+Results in this response:
 
 ```json
 {
@@ -200,6 +226,28 @@ The the listing should be created, you will receive a 200 response code and a re
 
 Listing Deletion Endpoint
 -------------------------
-Use this endpoint to remove a person from a list
+Deletes a person from a list.
 
+```
 DELETE /api/v1/lists/:list_id/listings/:id
+```
+
+Add Tag Endpoint
+-----------------
+Use this endpoint to apply a tag to the people contained in a list.
+Note: this endpoint returns a HTTP 204 status code, but the tag is
+not applied immediately. For larger lists, this operation takes many minutes.
+
+```
+POST /api/v1/lists/:list_id/tag/:tag_name
+```
+
+Remove Tag Endpoint
+-----------------
+Use this endpoint to delete a tag from the people contained in a list.
+Note: this endpoint returns a HTTP 204 status code, but the tag is not deleted
+immediately. For larger lists, this operation takes many minutes.
+
+```
+DELETE /api/v1/lists/:list_id/tag/:tag_name
+```
