@@ -15,8 +15,8 @@ GET /api/v1/lists
 ```
 
 ### Parameters
-* page - page number
-* per_page - number of results to show in one page of results (default 10, max 100)
+* `page` - page number
+* `per_page` - number of results to show in one page of results (default 10, max 100)
 
 ### Example
 
@@ -73,8 +73,8 @@ GET /api/v1/lists/:id/people
 ```
 
 ### Parameters
-* page - page number
-* per_page - number of results to show in one page of results (default 10, max 100)
+* `page` - page number
+* `per_page` - number of results to show in one page of results (default 10, max 100)
 
 ### Example
 
@@ -124,12 +124,12 @@ Creates an empty list with the given attributes.
 
 ### Parameters
 
-* list - the attributes of the list you want to create
-  * name - the name of the list
-  * slug - machine readable name of the list
-  * author_id - the author of the list
-  * sort_order - the order in which the list is sorted for retrieval
-    * Options: oldest_first, newest_first, priority_level, street_address, last_name
+* `list` - the attributes of the list you want to create
+  * `name` - the name of the list
+  * `slug` - machine readable name of the list
+  * `author_id` - the author of the list
+  * `sort_order` - the order in which the list is sorted for retrieval
+    * Options: `oldest_first`, `newest_first`, `priority_level`, `street_address`, `last_name`
 
 ### Example
 
@@ -194,7 +194,7 @@ POST /api/v1/lists/:list_id/listings
 ```
 
 ### Parameters
-* person_id: id of the person to add to the list
+* `person_id`: id of the person to add to the list
 
 ### Example
 
