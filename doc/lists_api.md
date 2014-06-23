@@ -203,3 +203,23 @@ Listing Deletion Endpoint
 Use this endpoint to remove a person from a list
 
 DELETE /api/v1/lists/:list_id/listings/:id
+
+Add Tag Endpoint
+-----------------
+Use this endpoint to apply a tag to the people contained in a list.
+Note: this endpoint returns a HTTP 204 status code, but the tag is
+not applied immediately. For larger lists, this operation takes many minutes.
+
+```
+POST /api/v1/lists/:list_id/tag/:tag_name
+```
+
+Remove Tag Endpoint
+-----------------
+Use this endpoint to delete a tag from the people contained in a list.
+Note: this endpoint returns a HTTP 204 status code, but the tag is not deleted
+immediately. For larger lists, this operation takes many minutes.
+
+```
+DELETE /api/v1/lists/:list_id/tag/:tag_name
+```
