@@ -40,7 +40,6 @@ Should result in this response:
       "name": "New Voters",
       "slug": "newvoters",
       "author_id": 1,
-      "sort_order": "oldest_first",
       "count": 5
     },
     {
@@ -48,7 +47,6 @@ Should result in this response:
       "name": "Famous Minnesotans",
       "slug": "minnesotans",
       "author_id": 15236,
-      "sort_order": "oldest_first",
       "count": 21
     },
     {
@@ -56,7 +54,6 @@ Should result in this response:
       "name": "Donors",
       "slug": "donors",
       "author_id": 15236,
-      "sort_order": "oldest_first",
       "count": 101
     }
   ]
@@ -128,8 +125,6 @@ Creates an empty list with the given attributes.
   * `name` - the name of the list
   * `slug` - a unique identifier for the list
   * `author_id` - the author of the list
-  * `sort_order` - the order in which the list is sorted for retrieval
-    * Options: `oldest_first`, `newest_first`, `priority_level`, `street_address`, `last_name`
 
 ### Example
 
@@ -146,8 +141,7 @@ With this post body:
   "list": {
     "name": "My List",
     "slug": "mylist",
-    "author_id": 17736,
-    "sort_order": "oldest_first"
+    "author_id": 17736
   }
 }
 ```
@@ -160,8 +154,7 @@ Should result in this response:
     "id": 12,
     "name": "My List",
     "slug": "mylist",
-    "author_id": 17736,
-    "sort_order": "oldest_first",
+    "author_id": 17736
     "count": 0
   }
 }
