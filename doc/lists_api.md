@@ -150,7 +150,7 @@ Should result in this response:
 
 ```json
 {
-  "list": {
+  "list_resource": {
     "id": 12,
     "name": "My List",
     "slug": "mylist",
